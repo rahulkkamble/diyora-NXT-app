@@ -1,5 +1,8 @@
 :root {}
 
+.text-center{
+    text-align: center !important;
+}
 
 .logo-font {
     color: #FFF;
@@ -83,4 +86,16 @@
 
 .home-page .home-most-popular{
     margin-top: 2rem;
+}
+
+.home-most-popular .carousel-wrapper{
+    display: flex;
+}
+
+.card-wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 1080px;
+    width: 100%;
 }
