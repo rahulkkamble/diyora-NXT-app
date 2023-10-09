@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Diyora NXT</title>
+
+    <!-- onsen starter js -->
+    <script src="https://unpkg.com/onsenui/js/onsenui.min.js"></script>
+
+    <!-- onsen starter css -->
+    <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsenui.css">
+    <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsen-css-components.min.css">
+
+    <!-- style.css -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <ons-navigator swipeable id="myNavigator" page="homepage.html"></ons-navigator>
+
+    <template id="homepage.html">
+        <ons-page id="homePage" class="home-page">
+            <!-- navbar / toolbar / tabbar -->
+            <ons-toolbar style="background-color: #031D1C;">
+                <div class="left"></div>
+                <div class="center">
+                    <div class="logo-font">X</div>
+                </div>
+                <div class="right">
+                    <ons-button>
+                        C
+                    </ons-button>
+                    <ons-button>
+                        W
+                    </ons-button>
+                </div>
+            </ons-toolbar>
+
+            <!-- carousel onsen -->
+            <ons-carousel swipeable auto-scroll overscrollable auto-refresh id="carousel" class="home-carousel"
+                style="height: 396px;">
+                <ons-carousel-item style="background-image: url(assets/img/portrait-girl-h396.png);">
+
+                </ons-carousel-item>
+                <ons-carousel-item style="background-color: #373B44;">
+
+                </ons-carousel-item>
+                <ons-carousel-item style="background-color: #D38312;">
+
+                </ons-carousel-item>
+            </ons-carousel>
+
+            <!-- categories section from Homepage -->
+            <div class="home-categories" style="background: url(assets/img/background-1.jpeg); background-position: center;
+            background-size: cover; background-repeat: no-repeat;">
+                <div class="caption">
+                    <div class="title">Shop by Category</div>
+                    <div class="content">Explore a Wide Array of Exquisite Categories</div>
+                </div>
+                <div class="more-content">
+                    <div class="card-wrapper">
+                        <ons-card class="home-category-cards">
+                            <img src="assets/img/Ring-1-resized.png" alt="Onsen UI" style="width: 100%">
+                            <div class="title">
+                                RINGS
+                            </div>
+                        </ons-card>
+                        <ons-card class="home-category-cards">
+                            <img src="assets/img/Ring-1-resized.png" alt="Onsen UI" style="width: 100%">
+                            <div class="title">
+                                RINGS
+                            </div>
+                        </ons-card>
+                        <ons-card class="home-category-cards">
+                            <img src="assets/img/Ring-1-resized.png" alt="Onsen UI" style="width: 100%">
+                            <div class="title">
+                                RINGS
+                            </div>
+                        </ons-card>
+                        <ons-card class="home-category-cards">
+                            <img src="assets/img/Ring-1-resized.png" alt="Onsen UI" style="width: 100%">
+                            <div class="title">
+                                RINGS
+                            </div>
+                        </ons-card>
+                        <ons-card class="home-category-cards">
+                            <img src="assets/img/Ring-1-resized.png" alt="Onsen UI" style="width: 100%">
+                            <div class="title">
+                                RINGS
+                            </div>
+                        </ons-card>
+                        <ons-card class="home-category-cards">
+                            <img src="assets/img/Ring-1-resized.png" alt="Onsen UI" style="width: 100%">
+                            <div class="title">
+                                RINGS
+                            </div>
+                        </ons-card>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Most Popular section from Homepage -->
+            <div class="home-most-popular">
+
+            </div>
+
+        </ons-page>
+    </template>
+
+
+</body>
+
+</html>

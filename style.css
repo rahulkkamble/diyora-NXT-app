@@ -1,0 +1,86 @@
+:root {}
+
+
+.logo-font {
+    color: #FFF;
+    text-align: center;
+    font-family: Futura Std;
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: 8.643px;
+}
+
+.home-carousel {
+    height: 396px;
+}
+
+.home-carousel ons-carousel-item {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+}
+
+.home-categories {
+    /* height: 379px; */
+    max-height: 1080px;
+}
+
+.home-categories .caption {
+    padding-top: 2rem;
+}
+
+.home-categories .title {
+    color: #003937;
+    text-align: center;
+    font-family: Futura Std;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24.432px;
+    letter-spacing: 0.244px;
+}
+
+.home-categories .content {
+    text-align: center;
+    color: #003937;
+    text-align: center;
+    font-family: Futura Std;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 29.665px;
+    letter-spacing: 0.297px;
+}
+
+.home-categories .card-wrapper {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 1080px;
+    justify-content: center;
+}
+
+.home-category-cards {
+    max-width: 160px;
+    height: 210px;
+    flex-shrink: 0;
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.10);
+    backdrop-filter: blur(17.325780868530273px);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.home-category-cards img{
+    width: 100%;
+}
+
+.home-page .home-most-popular{
+    margin-top: 2rem;
+}
