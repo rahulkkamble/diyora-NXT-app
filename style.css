@@ -48,6 +48,14 @@ ons-page {
     gap: 1rem;
     padding-right: 1rem;
 }
+.home-page ons-toolbar .right ons-button{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    line-height: normal;
+    background: none;
+}
+
 
 .home-page ons-toolbar .center .logo-imgs img {
     margin: auto 0;
