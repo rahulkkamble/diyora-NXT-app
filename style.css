@@ -173,6 +173,7 @@ ons-page {
 .for-who-section ons-card {
     /* width: 50%; */
     box-shadow: none;
+    max-width: 499px;
 }
 
 .for-who-section ons-card .relative {
@@ -222,6 +223,6 @@ ons-page {
 
 @media screen and (max-width: 576px) {
     body {
-        zoom: 0.6;
+        zoom: 0.7;
     }
 }
