@@ -5,12 +5,18 @@
     <meta charset="UTF-8">
     <title>Diyora NXT</title>
 
-    <!-- onsen starter js -->
-    <script src="https://unpkg.com/onsenui/js/onsenui.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
 
     <!-- onsen starter css -->
     <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsenui.css">
     <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsen-css-components.min.css">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/9.4.1/swiper-bundle.min.css" rel="stylesheet" />
+
+    <!-- onsen starter js -->
+    <!-- <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script> -->
+    <script src="https://unpkg.com/onsenui/js/onsenui.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/9.4.1/swiper-bundle.min.js"></script>
 
     <!-- style.css -->
     <link rel="stylesheet" href="style.css">
@@ -107,59 +113,78 @@
                     <div class="title">Most Popular Jewellery</div>
                     <div class="content">A curated selection of pieces cherished by connoisseurs</div>
                 </div>
-                <!-- carousel wrapper -->
-                <div class="carousel-wrapper">
-                    <div class="carousel-button-left">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="70" viewBox="0 0 30 70" fill="none">
-                            <path d="M0 0H20C25.5228 0 30 4.47715 30 10V60C30 65.5229 25.5228 70 20 70H0V0Z"
-                                fill="#EBEBEB" />
-                            <path
-                                d="M20.6116 49.969C20.4331 49.9715 20.2561 49.9314 20.092 49.8514C19.9279 49.7714 19.7803 49.6533 19.6588 49.5045L7.40835 35.5684C6.86388 34.949 6.86388 33.989 7.40835 33.3696L19.6588 19.4645C20.2033 18.8452 21.0472 18.8452 21.5917 19.4645C22.1361 20.0839 22.1361 21.044 21.5917 21.6633L10.294 34.4845L21.5917 47.3367C22.1361 47.956 22.1361 48.9161 21.5917 49.5355C21.3194 49.8451 20.9655 50 20.6388 50L20.6116 49.969Z"
-                                fill="#A6A6A6" />
-                        </svg>
+
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <!-- Onsen UI cards go here -->
+                        <div class="swiper-slide">
+                            <ons-card class="home-category-cards">
+                                <img src="assets/img/Ring-1-resized.png" alt="Onsen UI" style="width: 100%">
+                                <div class="title">
+                                    RINGS
+                                </div>
+                            </ons-card>
+                        </div>
+                        <div class="swiper-slide">
+                            <ons-card class="home-category-cards">
+                                <img src="assets/img/Ring-1-resized.png" alt="Onsen UI" style="width: 100%">
+                                <div class="title">
+                                    RINGS
+                                </div>
+                            </ons-card>
+                        </div>
+                        <div class="swiper-slide">
+                            <ons-card class="home-category-cards">
+                                <img src="assets/img/Ring-1-resized.png" alt="Onsen UI" style="width: 100%">
+                                <div class="title">
+                                    RINGS
+                                </div>
+                            </ons-card>
+                        </div>
+                        <div class="swiper-slide">
+                            <ons-card class="home-category-cards">
+                                <img src="assets/img/Ring-1-resized.png" alt="Onsen UI" style="width: 100%">
+                                <div class="title">
+                                    RINGS
+                                </div>
+                            </ons-card>
+                        </div>
+                        <div class="swiper-slide">
+                            <ons-card class="home-category-cards">
+                                <img src="assets/img/Ring-1-resized.png" alt="Onsen UI" style="width: 100%">
+                                <div class="title">
+                                    RINGS
+                                </div>
+                            </ons-card>
+                        </div>
+                        <div class="swiper-slide">
+                            <ons-card class="home-category-cards">
+                                <img src="assets/img/Ring-1-resized.png" alt="Onsen UI" style="width: 100%">
+                                <div class="title">
+                                    RINGS
+                                </div>
+                            </ons-card>
+                        </div>
+                        <div class="swiper-slide">
+                            <ons-card class="home-category-cards">
+                                <img src="assets/img/Ring-1-resized.png" alt="Onsen UI" style="width: 100%">
+                                <div class="title">
+                                    RINGS
+                                </div>
+                            </ons-card>
+                        </div>
+                        <div class="swiper-slide">
+                            <ons-card class="home-category-cards">
+                                <img src="assets/img/Ring-1-resized.png" alt="Onsen UI" style="width: 100%">
+                                <div class="title">
+                                    RINGS
+                                </div>
+                            </ons-card>
+                        </div>
+                        <!-- Add more cards as needed -->
                     </div>
-
-                    <!-- <div class="carousel-inside">
-                        <ons-carousel swipeable auto-scroll overscrollable id="carousel"
-                            style="position: relative; z-index: 1;">
-                            
-                            <ons-carousel-item>
-                                <ons-card class="home-category-cards">
-                                    <img src="assets/img/Ring-1-resized.png" alt="Onsen UI" style="width: 100%">
-                                    <div class="title">
-                                        RINGS
-                                    </div>
-                                </ons-card>
-                            </ons-carousel-item>
-                            <ons-carousel-item>
-                                <ons-card class="home-category-cards">
-                                    <img src="assets/img/Ring-1-resized.png" alt="Onsen UI" style="width: 100%">
-                                    <div class="title">
-                                        RINGS
-                                    </div>
-                                </ons-card>
-                            </ons-carousel-item>
-                            <ons-carousel-item>
-                                <ons-card class="home-category-cards">
-                                    <img src="assets/img/Ring-1-resized.png" alt="Onsen UI" style="width: 100%">
-                                    <div class="title">
-                                        RINGS
-                                    </div>
-                                </ons-card>
-                            </ons-carousel-item>
-                            <ons-carousel-item>
-                                <ons-card class="home-category-cards">
-                                    <img src="assets/img/Ring-1-resized.png" alt="Onsen UI" style="width: 100%">
-                                    <div class="title">
-                                        RINGS
-                                    </div>
-                                </ons-card>
-                            </ons-carousel-item>
-                            
-                        </ons-carousel>
-                    </div> -->
-
-                    <div class="carousel-button-right">
+                    <!-- Navigation arrows -->
+                    <div class="swiper-button-next">
                         <svg xmlns="http://www.w3.org/2000/svg" width="30" height="70" viewBox="0 0 30 70" fill="none">
                             <path d="M0 10C0 4.47715 4.47715 0 10 0H30V70H10C4.47715 70 0 65.5229 0 60V10Z"
                                 fill="#EBEBEB" />
@@ -168,10 +193,63 @@
                                 fill="#A6A6A6" />
                         </svg>
                     </div>
+                    <div class="swiper-button-prev">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="70" viewBox="0 0 30 70" fill="none">
+                            <path d="M0 0H20C25.5228 0 30 4.47715 30 10V60C30 65.5229 25.5228 70 20 70H0V0Z"
+                                fill="#EBEBEB" />
+                            <path
+                                d="M20.6116 49.969C20.4331 49.9715 20.2561 49.9314 20.092 49.8514C19.9279 49.7714 19.7803 49.6533 19.6588 49.5045L7.40835 35.5684C6.86388 34.949 6.86388 33.989 7.40835 33.3696L19.6588 19.4645C20.2033 18.8452 21.0472 18.8452 21.5917 19.4645C22.1361 20.0839 22.1361 21.044 21.5917 21.6633L10.294 34.4845L21.5917 47.3367C22.1361 47.956 22.1361 48.9161 21.5917 49.5355C21.3194 49.8451 20.9655 50 20.6388 50L20.6116 49.969Z"
+                                fill="#A6A6A6" />
+                        </svg>
+                    </div>
                 </div>
             </div>
 
+            <script>
+                var swiper = new Swiper('.swiper-container', {
+                    spaceBetween: 20,
+                    navigation: {
+                        nextEl: '.swiper-button-next',
+                        prevEl: '.swiper-button-prev',
+                    },
+                    breakpoints: {
+                        // Change slidesPerView on smaller screens
+                        620: {
+                            slidesPerView: 4, // Show 4 cards on screens less than or equal to 620px wide
+                        },
+                        480: {
+                            slidesPerView: 3, // Show 3 cards on screens less than or equal to 480px wide
+                        },
+                        360: {
+                            slidesPerView: 2, // Show 2 cards on screens less than or equal to 360px wide
+                        },
+                    },
+                });
+            </script>
+
+            <!-- for section -->
+            <div class="for-who-section">
+                <div class="row">
+                    <ons-card>
+                        <div class="relative">
+                            <img src="assets/img/boy-portrait-resized.png" alt="Onsen UI" style="width: 100%">
+                            <div class="card-overlay">
+                                <h5 class="text-uppercase">FOR hiM</h5>
+                            </div>
+                        </div>
+                    </ons-card>
+                    <ons-card>
+                        <div class="relative">
+                            <img src="assets/img/boy-portrait-resized.png" alt="Onsen UI" style="width: 100%">
+                            <div class="card-overlay">
+                                <h5 class="text-uppercase">FOR hiM</h5>
+                            </div>
+                        </div>
+                    </ons-card>
+                </div>
+            </div>
         </ons-page>
+
     </template>
 
 

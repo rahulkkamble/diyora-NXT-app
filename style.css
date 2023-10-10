@@ -1,6 +1,22 @@
 :root {}
 
-.text-center{
+*,
+html {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body,
+ons-page {
+    background-color: #FFF;
+}
+
+.text-uppercase {
+    text-transform: uppercase !important;
+}
+
+.text-center {
     text-align: center !important;
 }
 
@@ -78,24 +94,134 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
 }
 
-.home-category-cards img{
+.home-category-cards img {
     width: 100%;
 }
 
-.home-page .home-most-popular{
-    margin-top: 2rem;
+.home-page .home-most-popular {
+    padding-top: 2rem;
+    /* padding-bottom: 2rem; */
+    background-color: #FFF;
 }
 
-.home-most-popular .carousel-wrapper{
+.home-most-popular .carousel-wrapper {
     display: flex;
 }
 
-.card-wrapper{
+.card-wrapper {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     max-width: 1080px;
     width: 100%;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    /* background: #fff; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-container {
+    position: relative;
+    padding-top: 1rem;
+    overflow: hidden !important;
+}
+
+/* Customize arrow position */
+.swiper-button-next,
+.swiper-button-prev {
+    top: 63.5%;
+    /* Adjust vertical position */
+    transform: translateY(-50%);
+    /* Center vertically */
+    width: 2vw;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+    content: "";
+}
+
+.swiper-button-prev {
+    left: 0;
+}
+
+.swiper-button-next {
+    right: 0;
+}
+
+/* for who section */
+.for-who-section {
+    background-color: #FFF;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.for-who-section .row{
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+
+.for-who-section ons-card {
+    /* width: 50%; */
+    box-shadow: none;
+}
+
+.for-who-section ons-card .relative {
+    overflow: hidden;
+    position: relative;
+    border-radius: 10px;
+}
+
+.for-who-section ons-card .card-overlay {
+    position: absolute;
+    bottom: 0rem;
+    left: 0rem;
+    right: 0rem;
+    text-align: center;
+    border-radius: 10px;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.60) 100%);
+    margin: auto;
+    height: 180px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.for-who-section ons-card .card-overlay h5 {
+    color: #FFF;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 768px) {
+    body {
+        zoom: 0.8;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    body {
+        zoom: 0.6;
+    }
 }
