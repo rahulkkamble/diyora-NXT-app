@@ -80,6 +80,8 @@ ons-page {
     letter-spacing: 8.643px;
 }
 
+/* ==== carousel ==== */
+
 .home-carousel {
     height: 396px;
 }
@@ -90,6 +92,8 @@ ons-page {
     background-repeat: no-repeat;
     width: 100%;
 }
+
+/* ==== home categories ==== */
 
 .home-categories {
     /* height: 379px; */
@@ -127,6 +131,11 @@ ons-page {
 
 .home-categories .content {
     color: #003937;
+}
+
+.home-categories .more-content{
+    display: flex;
+    justify-content: center;
 }
 
 .home-categories .card-wrapper {
@@ -202,8 +211,9 @@ ons-page {
 }
 
 .swiper-slide {
-    width: 240px;
-    height: 332px;
+    padding: 0 1rem;
+    width: 235px;
+    height: 330px;
     font-size: 18px;
     display: flex;
     justify-content: center;
@@ -215,6 +225,7 @@ ons-page {
     height: 100%;
     padding: 0;
     margin: 0;
+    box-shadow: none;
 }
 
 ons-card .img-group {
@@ -241,14 +252,14 @@ ons-card .img-group .img img {
 }
 
 ons-card .img-group .badges {
-    padding-top: .75rem;
+    padding-top: .5rem;
     position: absolute;
     top: 0;
     left: 0;
     display: flex;
     width: 100%;
     justify-content: space-between;
-
+    align-items: center;
 }
 
 .badges .offer-green {
@@ -275,8 +286,14 @@ ons-card .img-group .badges {
     flex-shrink: 0;
 }
 
+.badges .heart-shape{
+    padding-right: .5rem;
+}
+
 .home-most-popular-card .content {
     text-align: left;
+    padding-left: .5rem;
+    padding-top: .5rem;
 }
 
 .home-most-popular-card .content .price-breakup {
@@ -467,5 +484,6 @@ ons-card .img-group .badges {
 
     .home-page ons-toolbar {
         zoom: .6;
+        height: 95px;
     }
 }
