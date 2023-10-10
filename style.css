@@ -50,7 +50,7 @@ ons-page {
     padding-top: 2rem;
 }
 
-.home-categories .title {
+.title, .home-categories .title {
     color: #003937;
     text-align: center;
     font-family: Futura Std;
@@ -61,7 +61,7 @@ ons-page {
     letter-spacing: 0.244px;
 }
 
-.home-categories .content {
+.content, .home-categories .content {
     text-align: center;
     color: #003937;
     text-align: center;
@@ -137,11 +137,16 @@ ons-page {
 /* Customize arrow position */
 .swiper-button-next,
 .swiper-button-prev {
-    top: 63.5%;
+    top: 55%;
     /* Adjust vertical position */
     transform: translateY(-50%);
     /* Center vertically */
     width: 2vw;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    transform: scale(1.1);
 }
 
 .swiper-button-next::after,
@@ -160,35 +165,52 @@ ons-page {
 /* for who section */
 .for-who-section {
     background-color: #FFF;
-    padding-top: 1rem;
+    padding-top: 2rem;
     padding-bottom: 1rem;
+    width: 100%;
 }
 
-.for-who-section .row{
+.for-who-section .row {
     display: flex;
-    padding: 0;
+    padding: 0 0 1rem 0;
     margin: 0;
 }
 
+
+.for-who-section .row .cards-wrapper {
+    display: flex;
+    padding: 0 1rem;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 1;
+    gap: 1rem;
+}
+
 .for-who-section ons-card {
-    /* width: 50%; */
     box-shadow: none;
+    min-width: 260px;
+    width: 100%;
     max-width: 499px;
+    padding: 0;
+    margin: 0;
+
 }
 
 .for-who-section ons-card .relative {
     overflow: hidden;
     position: relative;
-    border-radius: 10px;
+    width: 100%;
+    border-radius: 14px;
 }
 
 .for-who-section ons-card .card-overlay {
     position: absolute;
-    bottom: 0rem;
+    bottom: 0.2rem;
     left: 0rem;
     right: 0rem;
     text-align: center;
-    border-radius: 10px;
+    border-radius: 14px;
     background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.60) 100%);
     margin: auto;
     height: 180px;
@@ -198,8 +220,23 @@ ons-page {
 }
 
 .for-who-section ons-card .card-overlay h5 {
+    margin-top: 8rem;
     color: #FFF;
 }
+
+.for-who-section .row.second-row ons-card{
+    height: 180px;
+}
+
+.for-who-section .row.second-row ons-card img{
+    width: 100%;
+    object-fit: cover;
+}
+
+.for-who-section .row.second-row ons-card .relative{
+    width: 100%;
+}
+
 
 
 
@@ -224,5 +261,11 @@ ons-page {
 @media screen and (max-width: 576px) {
     body {
         zoom: 0.7;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .for-who-section .row .cards-wrapper {
+        flex-wrap: wrap;
     }
 }
