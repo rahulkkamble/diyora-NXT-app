@@ -267,8 +267,16 @@ ons-page {
     background-color: #FFF;
 }
 
+/* .carousel-most-popular ons-carousel-item{
+    display: flex;
+} */
+
 .home-most-popular .carousel-wrapper {
     display: flex;
+}
+
+.home-most-popular .caption .content{
+    margin-bottom: 1rem;
 }
 
 .card-wrapper {
@@ -283,12 +291,39 @@ ons-page {
     position: relative;
     padding-top: 1rem;
     overflow: hidden !important;
-    overflow-x: auto !important;
+    /* overflow-x: auto !important;  */
 }
 
-.swiper-container .swiper-wrapper {
+.swiper-container .swiper-wrapper,
+.carousel-most-popular .swiper-wrapper {
     display: flex;
     align-items: flex-start;
+}
+
+.carousel-most-popular .swiper-wrapper{
+    justify-content: center;
+}
+
+.carousel-most-popular{
+    position: relative;
+}
+
+.carousel-buttons{
+    position: absolute;
+    top: 15%;
+    transform: translateY(50%);
+
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.carousel-buttons .btn-next{
+    left: 0;
+}
+
+.carousel-buttons .btn-prev{
+    right: 0;
 }
 
 .swiper-slide {
