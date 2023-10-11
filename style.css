@@ -1,12 +1,6 @@
 
 @import url('https://fonts.cdnfonts.com/css/futura-std-4');
 
-:root {
-    --text-muted: #7D7D7D;
-    --toolbar-height: 80px;
-    --toolbar-material-height: 80px;
-}
-
 *,
 html {
     padding: 0;
@@ -18,6 +12,17 @@ body,
 ons-page {
     background-color: #FFF;
 }
+
+:root {
+    --text-muted: #7D7D7D;
+    --offer-green: #033432;
+    --remark-salmon-pink: #E58181;
+
+    --toolbar-height: 80px;
+    --toolbar-material-height: 80px;
+}
+
+/* ======== Global =========== */
 
 .text-uppercase {
     text-transform: uppercase !important;
@@ -79,6 +84,16 @@ ons-page {
     font-weight: bold;
 }
 
+.text-muted {
+    color: var(--text-muted) !important;
+}
+
+.cut-price {
+    text-decoration: line-through;
+}
+
+/* =============== start from here ================== */
+/* ==== toolbar / navbar ===== */
 .home-page ons-toolbar {
     background: #031D1C;
     height: var(--toolbar-height);
@@ -245,7 +260,7 @@ ons-page {
     text-transform: uppercase;
 }
 
-/* home-most-popular */
+/* ===== home-most-popular ===== */
 .home-page .home-most-popular {
     padding-top: 2rem;
     padding-bottom: 1rem;
@@ -327,18 +342,24 @@ ons-card .img-group .badges {
     align-items: center;
 }
 
-.badges .offer-green {
-    width: 75px;
+.badges .tag {
     height: 21px;
     flex-shrink: 0;
-    background: #033432;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 
-.badges .offer-green p {
+.badges .tag.offer-green{
+    background: var(--offer-green);
+}
+
+.badges .tag.remark-salmon-pink{
+    background-color: var(--remark-salmon-pink);
+}
+
+.badges .tag p {
     color: #FFF;
     font-family: 'Futura Std',sans-serif;
     font-size: 12.827px;
@@ -346,7 +367,7 @@ ons-card .img-group .badges {
     font-weight: 400;
     /* line-height: 19.241px; */
     letter-spacing: 0.577px;
-    width: 52px;
+    padding: 0 .5rem;
     height: 14px;
     flex-shrink: 0;
 }
@@ -364,14 +385,6 @@ ons-card .img-group .badges {
 .home-most-popular-card .content .price-breakup {
     display: inline-flex;   
     gap: .5rem;
-}
-
-.text-muted {
-    color: var(--text-muted) !important;
-}
-
-.cut-price {
-    text-decoration: line-through;
 }
 
 .product-title {
