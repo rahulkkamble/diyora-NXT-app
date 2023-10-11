@@ -448,7 +448,6 @@ ons-card .img-group .badges {
 /* for who section */
 .for-who-section {
     background-color: #FFF;
-    padding-top: 2rem;
     padding-bottom: 1rem;
     width: 100%;
 }
@@ -546,10 +545,6 @@ ons-card .img-group .badges {
         zoom: 0.7;
     }
 
-    .home-page ons-toolbar {
-        zoom: .8;
-    }
-
     .home-page ons-toolbar .center {
         justify-content: left;
     }
@@ -558,10 +553,5 @@ ons-card .img-group .badges {
 @media screen and (max-width: 375px) {
     .for-who-section .row .cards-wrapper {
         flex-wrap: wrap;
-    }
-
-    .home-page ons-toolbar {
-        zoom: .6;
-        height: 95px;
     }
 }
