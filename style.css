@@ -283,6 +283,7 @@ ons-page {
     position: relative;
     padding-top: 1rem;
     overflow: hidden !important;
+    overflow-x: auto !important;
 }
 
 .swiper-container .swiper-wrapper {
