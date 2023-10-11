@@ -1,5 +1,9 @@
+
+@import url('https://fonts.cdnfonts.com/css/futura-std-4');
+
 :root {
     --text-muted: #7D7D7D;
+    --toolbar-height: 80px;
 }
 
 *,
@@ -28,7 +32,7 @@ ons-page {
 
 .home-page ons-toolbar {
     background: #031D1C;
-    height: 80px;
+    height: var(--toolbar-height);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -106,7 +110,7 @@ ons-page {
 
 .title {
     text-align: center;
-    font-family: Futura Std;
+    font-family: 'Futura Std',sans-serif;
     font-size: 20px;
     font-style: normal;
     font-weight: 400;
@@ -121,7 +125,7 @@ ons-page {
 .content {
     text-align: center;
     text-align: center;
-    font-family: Futura Std;
+    font-family: 'Futura Std',sans-serif;
     font-size: 14px;
     font-style: normal;
     font-weight: 400;
@@ -153,24 +157,34 @@ ons-page {
     height: 210px;
     width: 100%;
     flex-shrink: 0;
+    padding: 0;
+    /* margin: 0; */
     border-radius: 15px;
     background: rgba(255, 255, 255, 0.10);
     backdrop-filter: blur(17.325780868530273px);
 
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
 }
 
-.home-category-cards img {
-    width: 100%;
+.home-category-cards .img-box {
+    object-fit: contain;
+    margin-top: auto;
+    margin-bottom: auto;
+    height: 100px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .home-category-cards .title {
+    flex-shrink: 0;
     color: #FFF;
+    margin-bottom: 1.75rem;
     text-align: center;
-    font-family: Futura Std;
+    font-family: 'Futura Std',sans-serif;
     font-size: 14.866px;
     font-style: normal;
     font-weight: 650;
@@ -275,7 +289,7 @@ ons-card .img-group .badges {
 
 .badges .offer-green p {
     color: #FFF;
-    font-family: Futura Std;
+    font-family: 'Futura Std',sans-serif;
     font-size: 12.827px;
     font-style: normal;
     font-weight: 400;
@@ -312,7 +326,7 @@ ons-card .img-group .badges {
 .product-title {
     font-weight: 400;
     color: #0F0F0F;
-    font-family: Futura Std;
+    font-family: 'Futura Std',sans-serif;
     font-size: 14.659px;
     font-style: normal;
     font-weight: 400;
@@ -324,7 +338,7 @@ ons-card .img-group .badges {
 
 .product-description {
     color: #7D7D7D;
-    font-family: Futura Std;
+    font-family: 'Futura Std',sans-serif;
     font-size: 12.827px;
     font-style: normal;
     font-weight: 400;
