@@ -294,6 +294,14 @@ ons-page {
     overflow: hidden;
 }
 
+.home-category-cards:active,
+.home-category-cards:focus,
+.home-category-cards.active {
+    border-radius: 19.251px;
+    background: rgba(255, 255, 255, 0.50);
+    backdrop-filter: blur(71.17500305175781px);
+}
+
 .home-category-cards .img-box {
     object-fit: contain;
     margin-top: auto;
@@ -618,6 +626,7 @@ ons-card .img-group .badges {
 
 /* ================= Category - EarRings // page : category-earring.html ================ */
 /* ================= Category - EarRings // page : category-earring.html ================ */
+
 ons-back-button.remove-icon .back-button__icon {
     display: none;
 }
@@ -653,6 +662,12 @@ ons-back-button.remove-icon {
     letter-spacing: 0.747px;
 }
 
+.earring-category-carousel ons-carousel-item{
+    background-size: cover;
+    width: 100%;
+    background-position: center;   
+}
+
 /* .earring-category-carousel  */
 ons-carousel-item .cta-section {
     width: 467px;
@@ -675,7 +690,7 @@ ons-carousel-item .cta-section {
     align-items: center;
     gap: 21.504px;
     flex-shrink: 0;
-    
+
     color: #FFF;
     text-align: center;
     font-family: Futura Std;
@@ -730,8 +745,6 @@ p.subheading {
     text-transform: capitalize;
 }
 
-
-
 .middle-section {
     display: flex;
 }
@@ -739,7 +752,6 @@ p.subheading {
 .left-side-category-section {
     width: 233px;
     padding: 1rem;
-    /* height: 1458px; */
     flex-shrink: 0;
     background: url(assets/img/left-side-bg-resized.png), lightgray -3325130894250371000px -17932839726027465000px / 13701447202043003000% 2040204553460131300% no-repeat;
 }
@@ -779,6 +791,7 @@ p.subheading {
     padding-left: 2.5rem;
     background-color: #fff;
     width: 100%;
+
 }
 
 .filter-row {
@@ -888,3 +901,8 @@ p.subheading {
 }
 
 /* ================= Category - EarRings // page : category-earring.html ================ */
+@media screen and (max-width: 576px) {
+    .ons-toolbar.navbar {
+        zoom: .6;
+    }
+}
