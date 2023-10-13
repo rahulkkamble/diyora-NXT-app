@@ -901,11 +901,73 @@
                         </div>
                     </div>
                 </ons-carousel-item>
-                <ons-carousel-item style="background-color: #373B44;">
-
+                <ons-carousel-item style="background-image: url(assets/img/carousel-gifting-bg.jpeg);">
+                    <div class="cta-section">
+                        <div class="cta-content">
+                            <div class="cta-heading">
+                                <div class="cta-top-heading-with-line">
+                                    <p class="heading-second">NOW LAUNCHING</p>
+                                    <img src="assets/img/heading-bottom-line.svg" alt="">
+                                </div>
+                                <p class="heading-first">PURE COLLECTION</p>
+                                <p class="subheading">Wear with pride</p>
+                            </div>
+                            <div class="cta-button">
+                                <p>view collection</p>
+                            </div>
+                        </div>
+                    </div>
                 </ons-carousel-item>
-                <ons-carousel-item style="background-color: #D38312;">
-
+                <ons-carousel-item style="background-image: url(assets/img/carousel-necklace-portrait-bg.jpeg);">
+                    <div class="cta-section">
+                        <div class="cta-content">
+                            <div class="cta-heading">
+                                <div class="cta-top-heading-with-line">
+                                    <p class="heading-second">NOW LAUNCHING</p>
+                                    <img src="assets/img/heading-bottom-line.svg" alt="">
+                                </div>
+                                <p class="heading-first">PURE COLLECTION</p>
+                                <p class="subheading">Wear with pride</p>
+                            </div>
+                            <div class="cta-button">
+                                <p>view collection</p>
+                            </div>
+                        </div>
+                    </div>
+                </ons-carousel-item>
+                <ons-carousel-item style="background-image: url(assets/img/carousel-boy-blacktshirt-bg.jpeg);">
+                    <div class="cta-section">
+                        <div class="cta-content">
+                            <div class="cta-heading">
+                                <div class="cta-top-heading-with-line">
+                                    <p class="heading-second">NOW LAUNCHING</p>
+                                    <img src="assets/img/heading-bottom-line.svg" alt="">
+                                </div>
+                                <p class="heading-first">PURE COLLECTION</p>
+                                <p class="subheading">Wear with pride</p>
+                            </div>
+                            <div class="cta-button">
+                                <p>view collection</p>
+                            </div>
+                        </div>
+                    </div>
+                </ons-carousel-item>
+                <ons-carousel-item style="background-image: url(assets/img/carousel-kids-bg.jpeg);">
+                    <div class="cta-section">
+                        <div class="cta-content">
+                            <div class="cta-heading">
+                                <div class="cta-top-heading-with-line">
+                                    <p class="heading-second">NOW LAUNCHING</p>
+                                    <img src="assets/img/heading-bottom-line.svg" alt="">
+                                </div>
+                                <p class="heading-first">PURE COLLECTION</p>
+                                <p class="subheading">Wear with pride</p>
+                            </div>
+                            <div class="cta-button">
+                                <p>view collection</p>
+                            </div>
+                        </div>
+                    </div>
                 </ons-carousel-item>
             </ons-carousel>
 
@@ -959,13 +1021,14 @@
 
                 <!-- right side filter and product listed -->
                 <div class="right-side-cards-section">
-                    <!-- for section -->
-                    <div class="for-who-section category-page pb-0">
+                    <!-- for section // for gift page -->
+                    <div class="for-who-section d-none category-page pb-0">
                         <div class="row second-row">
                             <div class="cards-wrapper">
                                 <ons-card>
                                     <div class="relative">
-                                        <img src="assets/img/boy-portrait-resized.png" alt="Onsen UI" style="width: 100%">
+                                        <img src="assets/img/boy-portrait-resized.png" alt="Onsen UI"
+                                            style="width: 100%">
                                         <div class="card-overlay">
                                             <h5 class="text-uppercase">FOR HIM</h5>
                                         </div>
@@ -973,7 +1036,8 @@
                                 </ons-card>
                                 <ons-card class="active">
                                     <div class="relative">
-                                        <img src="assets/img/girls-portrait-resized.png" alt="Onsen UI" style="width: 100%">
+                                        <img src="assets/img/girls-portrait-resized.png" alt="Onsen UI"
+                                            style="width: 100%">
                                         <div class="card-overlay">
                                             <h5 class="text-uppercase">For Her</h5>
                                         </div>
@@ -1334,10 +1398,149 @@
                 </div>
             </div>
 
+            <script>
+                document.addEventListener('init', function (event) {
+                    var page = event.target;
+
+                    if (page.id === 'earringCategory') {
+                        page.querySelectorAll('.home-most-popular-card').forEach(element => {
+                            element.onclick = function () {
+                                console.log('clicked on card having className .home-most-popular-card,')
+                                document.querySelector('#myNavigator').pushPage('product-page.html', { data: { title: 'Product' } });
+                            };
+                        });
+                    }
+                    // else if (page.id === 'category-earring') {
+                    //     page.querySelector('div class="ons-toolbar navbar" .center').innerHTML = page.data.title;
+                    // }
+                });
+            </script>
+
         </ons-page>
 
     </template>
 
+    <!-- ========================== product page =========================== -->
+    <template id="product-page.html">
+        <ons-page id="productPage">
+            <!-- navbar same as categroy page -->
+            <div class="ons-toolbar navbar">
+                <div class="left">
+                    <ons-back-button class="remove-icon">
+                        <div class="frame-back-button">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="19" viewBox="0 0 25 19"
+                                fill="none">
+                                <path
+                                    d="M11.5974 18.4937C11.2759 18.8179 10.84 19 10.3854 19C9.93081 19 9.49484 18.8179 9.17336 18.4937L1.45896 10.7121C1.13757 10.3878 0.95703 9.94809 0.95703 9.48956C0.95703 9.03103 1.13757 8.59127 1.45896 8.26699L9.17336 0.485419C9.49669 0.170424 9.92972 -0.00387323 10.3792 6.54828e-05C10.8287 0.0040061 11.2587 0.185868 11.5765 0.506482C11.8944 0.827098 12.0747 1.26081 12.0786 1.71421C12.0825 2.16761 11.9097 2.60442 11.5974 2.93056L6.95676 7.76032L23.2427 7.76032C23.6974 7.76032 24.1334 7.94251 24.4549 8.26681C24.7764 8.5911 24.957 9.03094 24.957 9.48956C24.957 9.94818 24.7764 10.388 24.4549 10.7123C24.1334 11.0366 23.6974 11.2188 23.2427 11.2188L6.95676 11.2188L11.5974 16.0486C11.9188 16.3728 12.0993 16.8126 12.0993 17.2711C12.0993 17.7297 11.9188 18.1694 11.5974 18.4937Z"
+                                    fill="#FFEFDC" />
+                            </svg>
+                            <p>Back</p>
+                        </div>
+                    </ons-back-button>
+                </div>
+                <div class="center with-back">
+                    <div class="logo-imgs logo-left-img">
+                        <img src="assets/img/PTlogoresize.png" alt="pure traces logo text">
+                    </div>
+                    <div class="logo-font">X</div>
+                    <div class="logo-imgs logo-right-img">
+                        <img src="assets/img/rivalogoresized.png" alt="rivalogoresized">
+                    </div>
+                </div>
+                <div class="right">
+                    <ons-button class="header-icon">
+                        <img src="assets/img/cart-trolley-shape.svg" alt="cart-trolley-shape">
+                    </ons-button>
+                    <ons-button class="header-icon">
+                        <img src="assets/img/wishlist-heart-shape.svg" alt="wishlist-heart-shape">
+                    </ons-button>
+                </div>
+            </div>
+
+            <!-- product image -->
+            <div class="product-showcase">
+                <div class="product-slider-images">
+                    <div class="product-main-image">
+                        <img src="assets/img/product-showcase-1.png" alt="product-image">
+                    </div>
+                    <div class="sliding-varient-images">
+                        <div class="varient-image-wrapper">
+                            <div class="variation-slide">
+                                <img src="assets/img/showcase-slide-image.png" alt="bottom-slide-image">
+                            </div>
+                            <div class="variation-slide">
+                                <img src="assets/img/showcase-slide-image.png" alt="bottom-slide-image">
+                            </div>
+                            <div class="variation-slide">
+                                <img src="assets/img/showcase-slide-image.png" alt="bottom-slide-image">
+                            </div>
+                            <div class="variation-slide">
+                                <img src="assets/img/showcase-slide-image.png" alt="bottom-slide-image">
+                            </div>
+                            <div class="variation-slide">
+                                <img src="assets/img/showcase-slide-image.png" alt="bottom-slide-image">
+                            </div>
+                            <div class="variation-slide">
+                                <img src="assets/img/showcase-slide-image.png" alt="bottom-slide-image">
+                            </div>
+                            <div class="variation-slide">
+                                <img src="assets/img/showcase-slide-image.png" alt="bottom-slide-image">
+                            </div>
+                            <div class="variation-slide">
+                                <img src="assets/img/showcase-slide-image.png" alt="bottom-slide-image">
+                            </div>
+                            <div class="variation-slide">
+                                <img src="assets/img/showcase-slide-image.png" alt="bottom-slide-image">
+                            </div>
+                            <div class="variation-slide">
+                                <img src="assets/img/showcase-slide-image.png" alt="bottom-slide-image">
+                            </div>
+                        </div>
+                        <div class="slide-prev-btn">
+                            <img src="assets/img/Button - Prev slide.svg" alt="">
+                        </div>
+                        <div class="slide-next-btn">
+                            <img src="assets/img/Button - Next slide.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="product-description">
+                    <div class="left">
+                        <p class="product-name">Mystical Moonbeam Solitaire Ring</p>
+                        <p class="product-varient">14K White Gold, GH, VS2+</p>
+                        <p class="product-price">₹448,977</p>
+                    </div>
+                    <div class="right">
+                        <img src="assets/img/heart-blank.svg" alt="">
+                    </div>
+                </div>
+                <div class="product-customization">
+                    <div class="metal-colors">
+                        <p>Metal Color:</p>
+                        <div class="color-options">
+                            <div class="bg-yellow-gold color"></div>
+                            <div class="bg-rose-gold color"></div>
+                            <div class="bg-white-gold color"></div>
+                        </div>
+                    </div>
+                    <div class="gold-quality">
+                        <div class="14kt">14kt</div>
+                        <div class="18kt">18kt</div>
+                    </div>
+                </div>
+                <div class="product-buttons"></div>
+            </div>
+
+            <!-- summary details // product details -->
+            <div class="product-details-all">
+                <div class="item-details"></div>
+                <div class="diamond-details"></div>
+                <div class="price-breakup"></div>
+            </div>
+
+
+        </ons-page>
+    </template>
 
 </body>
 
