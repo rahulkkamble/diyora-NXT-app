@@ -93,6 +93,10 @@ ons-page {
     padding-top: 3rem;
 }
 
+.pb-0 {
+    padding-bottom: 0 !important;
+}
+
 .pb-3 {
     padding-bottom: 1rem;
 }
@@ -131,6 +135,10 @@ ons-page {
 
 .pe-3 {
     padding-right: 1rem;
+}
+
+.d-none {
+    display: none !important;
 }
 
 .price-breakup {
@@ -591,13 +599,21 @@ ons-card .img-group .badges {
     border-radius: 14px;
 }
 
+.for-who-section ons-card img {
+    padding: 0;
+    margin: 0;
+    display: inline-flex;
+    justify-content: center;
+    align-content: center;
+}
+
 .for-who-section ons-card .card-overlay {
     position: absolute;
     bottom: 0.2rem;
     left: 0rem;
     right: 0rem;
     text-align: center;
-    border-radius: 14px;
+    border-radius: 10px;
     background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.60) 100%);
     margin: auto;
     height: 180px;
@@ -611,10 +627,6 @@ ons-card .img-group .badges {
     color: #FFF;
 }
 
-.for-who-section .row.second-row ons-card {
-    height: 180px;
-}
-
 .for-who-section .row.second-row ons-card img {
     width: 100%;
     object-fit: cover;
@@ -622,6 +634,15 @@ ons-card .img-group .badges {
 
 .for-who-section .row.second-row ons-card .relative {
     width: 100%;
+}
+
+.for-who-section .row.second-row ons-card .card-overlay {
+    height: 130px;
+}
+
+.for-who-section .row.second-row ons-card .card-overlay h5 {
+    margin-top: 6rem;
+    color: #FFF;
 }
 
 /* ================= Category - EarRings // page : category-earring.html ================ */
@@ -662,10 +683,10 @@ ons-back-button.remove-icon {
     letter-spacing: 0.747px;
 }
 
-.earring-category-carousel ons-carousel-item{
+.earring-category-carousel ons-carousel-item {
     background-size: cover;
     width: 100%;
-    background-position: center;   
+    background-position: center;
 }
 
 /* .earring-category-carousel  */
@@ -751,6 +772,7 @@ p.subheading {
 
 .left-side-category-section {
     width: 233px;
+    min-height: 1440px;
     padding: 1rem;
     flex-shrink: 0;
     background: url(assets/img/left-side-bg-resized.png), lightgray -3325130894250371000px -17932839726027465000px / 13701447202043003000% 2040204553460131300% no-repeat;
@@ -791,6 +813,7 @@ p.subheading {
     padding-left: 2.5rem;
     background-color: #fff;
     width: 100%;
+    min-height: 1440px;
 
 }
 
@@ -852,6 +875,39 @@ p.subheading {
 .product-card-wrapper {
     padding: 0;
     width: 229px;
+}
+
+/* for who section category page */
+
+.for-who-section.category-page .cards-wrapper {
+    padding: 0;
+}
+
+.for-who-section.category-page .cards-wrapper ons-card {
+    width: 375.621px;
+    height: 137px;
+    flex-shrink: 0;
+    overflow: hidden;
+}
+
+.for-who-section.category-page .cards-wrapper ons-card .relative{
+    height: 100%;
+}
+
+.for-who-section.category-page .cards-wrapper ons-card img{
+    width: 100%;
+}
+
+.for-who-section.category-page .cards-wrapper ons-card .card-overlay {
+    height: 137px;
+    top: 0;
+    bottom: 0;
+}
+
+.for-who-section.category-page .cards-wrapper ons-card.active .card-overlay,
+.for-who-section.category-page .cards-wrapper ons-card:active .card-overlay,
+.for-who-section.category-page .cards-wrapper ons-card:focus .card-overlay {
+    background: -1.315px -199.574px / 100.7% 414.557% no-repeat, #D9D9D9aa;
 }
 
 
