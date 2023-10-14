@@ -474,13 +474,16 @@
 
                 <script>
                     var carousel = document.getElementById('carouselMostPopular');
+                    var carouselVariation = document.getElementById('carouselVariation');
 
                     var prev = function () {
                         carousel.prev();
+                        carouselVariation.prev();
                     };
 
                     var next = function () {
                         carousel.next();
+                        carouselVariation.next();
                     };
 
                     ons.ready(function () {
@@ -1472,48 +1475,133 @@
             <div class="product-showcase">
                 <div class="product-slider-images">
                     <div class="product-main-image">
-                        <img src="assets/img/product-showcase-1.png" alt="product-image">
+                        <div class="carousel-container-for-main-image" style="width: 100%;">
+                            <ons-carousel swipeable auto-scroll overscrollable auto-refresh
+                                class="earring-category-carousel" id="carouselMainImage">
+                                <ons-carousel-item>
+                                    <video class="video-main" autoplay loop muted
+                                        src="assets/video/R_PTRG00451-PA1163 (30CT).mp4" type="video/mp4">
+                                    </video>
+                                    <div class="fullscreen-btn">
+                                        <img src="assets/img/video-play-icon.png" alt="video-play-icon">
+                                    </div>
+                                    <!-- <img src="assets/img/product-showcase-1.png" alt=""> -->
+                                </ons-carousel-item>
+                                <ons-carousel-item>
+                                    <img src="assets/img/product-showcase-1.png" alt="">
+                                </ons-carousel-item>
+                                <ons-carousel-item>
+                                    <img src="assets/img/product-showcase-1.png" alt="">
+                                </ons-carousel-item>
+                            </ons-carousel>
+                        </div>
                     </div>
                     <div class="sliding-varient-images">
-                        <div class="varient-image-wrapper">
-                            <div class="variation-slide">
-                                <img src="assets/img/showcase-slide-image.png" alt="bottom-slide-image">
+
+                        <ons-carousel swipeable auto-scroll overscrollable auto-refresh id="carouselVariation"
+                            class="earring-category-carousel">
+                            <ons-carousel-item>
+                                <div class="varient-image-wrapper">
+                                    <div class="variation-slide">
+                                        <img src="assets/img/showcase-slide-image.png" alt="bottom-slide-image">
+                                    </div>
+                                    <div class="variation-slide">
+                                        <img src="assets/img/showcase-slide-image.png" alt="bottom-slide-image">
+                                    </div>
+                                    <div class="variation-slide">
+                                        <img src="assets/img/showcase-slide-image.png" alt="bottom-slide-image">
+                                    </div>
+                                    <div class="variation-slide">
+                                        <video autoplay loop muted>
+                                            <source src="assets/video/R_PTRG00451-PA1163 (30CT).mp4" type="video/mp4" />
+                                        </video>
+                                    </div>
+                                    <div class="variation-slide">
+                                        <img src="assets/img/showcase-slide-image.png" alt="bottom-slide-image">
+                                    </div>
+                                    <div class="variation-slide">
+                                        <img src="assets/img/showcase-slide-image.png" alt="bottom-slide-image">
+                                    </div>
+                                    <div class="variation-slide">
+                                        <img src="assets/img/showcase-slide-image.png" alt="bottom-slide-image">
+                                    </div>
+                                </div>
+                            </ons-carousel-item>
+                            <ons-carousel-item>
+                                <div class="varient-image-wrapper">
+                                    <div class="variation-slide">
+                                        <img src="assets/img/showcase-slide-image.png" alt="bottom-slide-image">
+                                    </div>
+                                    <div class="variation-slide">
+                                        <img src="assets/img/showcase-slide-image.png" alt="bottom-slide-image">
+                                    </div>
+                                    <div class="variation-slide">
+                                        <img src="assets/img/showcase-slide-image.png" alt="bottom-slide-image">
+                                    </div>
+                                    <div class="variation-slide">
+                                        <img src="assets/img/showcase-slide-image.png" alt="bottom-slide-image">
+                                    </div>
+                                    <div class="variation-slide">
+                                        <img src="assets/img/showcase-slide-image.png" alt="bottom-slide-image">
+                                    </div>
+                                    <div class="variation-slide">
+                                        <img src="assets/img/showcase-slide-image.png" alt="bottom-slide-image">
+                                    </div>
+                                    <div class="variation-slide">
+                                        <img src="assets/img/showcase-slide-image.png" alt="bottom-slide-image">
+                                    </div>
+                                </div>
+                            </ons-carousel-item>
+
+                        </ons-carousel>
+                        <div class="variation-carousel-buttons">
+                            <div class="slide-prev-btn" onclick="prev()">
+                                <img src="assets/img/Button - Prev slide.svg" alt="">
                             </div>
-                            <div class="variation-slide">
-                                <img src="assets/img/showcase-slide-image.png" alt="bottom-slide-image">
-                            </div>
-                            <div class="variation-slide">
-                                <img src="assets/img/showcase-slide-image.png" alt="bottom-slide-image">
-                            </div>
-                            <div class="variation-slide">
-                                <img src="assets/img/showcase-slide-image.png" alt="bottom-slide-image">
-                            </div>
-                            <div class="variation-slide">
-                                <img src="assets/img/showcase-slide-image.png" alt="bottom-slide-image">
-                            </div>
-                            <div class="variation-slide">
-                                <img src="assets/img/showcase-slide-image.png" alt="bottom-slide-image">
-                            </div>
-                            <div class="variation-slide">
-                                <img src="assets/img/showcase-slide-image.png" alt="bottom-slide-image">
-                            </div>
-                            <div class="variation-slide">
-                                <img src="assets/img/showcase-slide-image.png" alt="bottom-slide-image">
-                            </div>
-                            <div class="variation-slide">
-                                <img src="assets/img/showcase-slide-image.png" alt="bottom-slide-image">
-                            </div>
-                            <div class="variation-slide">
-                                <img src="assets/img/showcase-slide-image.png" alt="bottom-slide-image">
+                            <div class="slide-next-btn" onclick="next()">
+                                <img src="assets/img/Button - Next slide.svg" alt="">
                             </div>
                         </div>
-                        <div class="slide-prev-btn">
-                            <img src="assets/img/Button - Prev slide.svg" alt="">
-                        </div>
-                        <div class="slide-next-btn">
-                            <img src="assets/img/Button - Next slide.svg" alt="">
-                        </div>
+
+                        <script>
+                            var carouselVariation = document.getElementById('carouselVariation');
+
+                            var prev = function () {
+                                carouselVariation.prev();
+                            };
+
+                            var next = function () {
+                                carouselVariation.next();
+                            };
+
+                            // for view in full screen
+                            function enterFullScreen(element) {
+                                if (element.requestFullscreen) {
+                                    element.requestFullscreen();
+                                } else if (element.mozRequestFullScreen) {
+                                    element.mozRequestFullScreen();     // Firefox
+                                } else if (element.webkitRequestFullscreen) {
+                                    element.webkitRequestFullscreen();  // Safari
+                                } else if (element.msRequestFullscreen) {
+                                    element.msRequestFullscreen();      // IE/Edge
+                                }
+                            };
+                            let btn = document.querySelector(".fullscreen-btn");
+                            btn.addEventListener("click", function () {
+                                let videoEle = document.querySelector('.video-main');
+                                enterFullScreen(videoEle);
+                            });
+                            document.addEventListener('fullscreenchange', (event) => {
+                                if (document.fullscreenElement) {
+                                    console.log('Entered fullscreen:', document.fullscreenElement);
+                                } else {
+                                    console.log('Exited fullscreen.');
+                                }
+                            });
+                        </script>
+
                     </div>
+
                 </div>
                 <div class="product-description-product-page">
                     <div class="left">
