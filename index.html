@@ -1586,8 +1586,8 @@
                                     element.msRequestFullscreen();      // IE/Edge
                                 }
                             };
-                            let btn = document.querySelector(".fullscreen-btn");
-                            btn.addEventListener("click", function () {
+                            let btnFullscreen = document.querySelector(".fullscreen-btn");
+                            btnFullscreen.addEventListener("click", function () {
                                 let videoEle = document.querySelector('.video-main');
                                 enterFullScreen(videoEle);
                             });
