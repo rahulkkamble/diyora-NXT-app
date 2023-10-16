@@ -3,13 +3,14 @@
 
 
 <!-- Mirrored from metaverse.tech2edge.co/diyora-kiosk-sim/ by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 16 Oct 2023 06:01:30 GMT -->
+
 <head>
     <meta charset="UTF-8">
     <title>Diyora NXT</title>
 
     <!-- onsen starter css -->
     <link rel="stylesheet" href="assets/css/onsenui2.min.css">
-    
+
     <!-- onsen starter js -->
     <script src="assets/js/onsenui.min.js"></script>
 
@@ -78,8 +79,8 @@
                             </div>
                         </ons-card>
                         <ons-card class="home-category-cards" onclick="navCat();">
-                            <div class="img-box pb-4-5rem pe-3"><img src="assets/img/pendants-category-full.png"
-                                    alt="" style="width: 100%">
+                            <div class="img-box pb-4-5rem pe-3"><img src="assets/img/pendants-category-full.png" alt=""
+                                    style="width: 100%">
                             </div>
                             <div class="title">
                                 PENDANTS
@@ -100,8 +101,8 @@
                             </div>
                         </ons-card>
                         <ons-card class="home-category-cards" onclick="navCat();">
-                            <div class="img-box pb-4-5rem"><img src="assets/img/necklace-category-full.png"
-                                    alt="" style="width: 110%"></div>
+                            <div class="img-box pb-4-5rem"><img src="assets/img/necklace-category-full.png" alt=""
+                                    style="width: 110%"></div>
                             <div class="title">
                                 NECKLACE
                             </div>
@@ -125,7 +126,7 @@
                     // }
                 });
 
-                function navCat(){
+                function navCat() {
                     document.querySelector('#myNavigator').pushPage('category-earring.html', { data: { title: 'EarRing Category' } });
                 }
 
@@ -464,6 +465,7 @@
                 </div>
 
                 <script>
+
                     var carousel = document.getElementById('carouselMostPopular');
                     var carouselVariation = document.getElementById('carouselVariation');
 
@@ -481,6 +483,14 @@
                         var carousel = document.addEventListener('postchange', function (event) {
                             console.log('Changed to ' + event.activeIndex)
                         });
+                    });
+
+
+                    document.querySelectorAll('.home-most-popular-card').forEach(element => {
+                        element.onclick = function () {
+                            console.log('clicked on card having className .home-most-popular-card,')
+                            document.querySelector('#myNavigator').pushPage('product-page.html', { data: { title: 'Product' } });
+                        };
                     });
                 </script>
 
@@ -833,20 +843,6 @@
                     </div>
                 </div>
             </div>
-            <script>
-                document.addEventListener('init', function (event) {
-                    var page = event.target;
-
-                    if (page.id === 'homePage') {
-                        page.querySelectorAll('.home-most-popular-card').forEach(element => {
-                            element.onclick = function () {
-                                console.log('clicked on card having className .home-most-popular-card,')
-                                document.querySelector('#myNavigator').pushPage('product-page.html', { data: { title: 'Product' } });
-                            };
-                        });
-                    }
-                });
-            </script>
         </ons-page>
 
     </template>
@@ -1034,8 +1030,7 @@
                             <div class="cards-wrapper">
                                 <ons-card>
                                     <div class="relative">
-                                        <img src="assets/img/boy-portrait-resized.png" alt=""
-                                            style="width: 100%">
+                                        <img src="assets/img/boy-portrait-resized.png" alt="" style="width: 100%">
                                         <div class="card-overlay">
                                             <h5 class="text-uppercase">FOR HIM</h5>
                                         </div>
@@ -1043,8 +1038,7 @@
                                 </ons-card>
                                 <ons-card class="active">
                                     <div class="relative">
-                                        <img src="assets/img/girls-portrait-resized.png" alt=""
-                                            style="width: 100%">
+                                        <img src="assets/img/girls-portrait-resized.png" alt="" style="width: 100%">
                                         <div class="card-overlay">
                                             <h5 class="text-uppercase">For Her</h5>
                                         </div>
@@ -1081,8 +1075,7 @@
                             <ons-card class="home-most-popular-card">
                                 <div class="img-group">
                                     <div class="img">
-                                        <img src="assets/img/ring-popular-1-resized.png" alt=""
-                                            style="width: 100%">
+                                        <img src="assets/img/ring-popular-1-resized.png" alt="" style="width: 100%">
                                     </div>
                                     <div class="badges">
                                         <div class="left">
@@ -1117,8 +1110,7 @@
                             <ons-card class="home-most-popular-card">
                                 <div class="img-group">
                                     <div class="img">
-                                        <img src="assets/img/ring-popular-1-resized.png" alt=""
-                                            style="width: 100%">
+                                        <img src="assets/img/ring-popular-1-resized.png" alt="" style="width: 100%">
                                     </div>
                                     <div class="badges">
                                         <div class="left">
@@ -1153,8 +1145,7 @@
                             <ons-card class="home-most-popular-card">
                                 <div class="img-group">
                                     <div class="img">
-                                        <img src="assets/img/ring-popular-1-resized.png" alt=""
-                                            style="width: 100%">
+                                        <img src="assets/img/ring-popular-1-resized.png" alt="" style="width: 100%">
                                     </div>
                                     <div class="badges">
                                         <div class="left">
@@ -1189,8 +1180,7 @@
                             <ons-card class="home-most-popular-card">
                                 <div class="img-group">
                                     <div class="img">
-                                        <img src="assets/img/ring-popular-1-resized.png" alt=""
-                                            style="width: 100%">
+                                        <img src="assets/img/ring-popular-1-resized.png" alt="" style="width: 100%">
                                     </div>
                                     <div class="badges">
                                         <div class="left">
@@ -1225,8 +1215,7 @@
                             <ons-card class="home-most-popular-card">
                                 <div class="img-group">
                                     <div class="img">
-                                        <img src="assets/img/ring-popular-1-resized.png" alt=""
-                                            style="width: 100%">
+                                        <img src="assets/img/ring-popular-1-resized.png" alt="" style="width: 100%">
                                     </div>
                                     <div class="badges">
                                         <div class="left">
@@ -1261,8 +1250,7 @@
                             <ons-card class="home-most-popular-card">
                                 <div class="img-group">
                                     <div class="img">
-                                        <img src="assets/img/ring-popular-1-resized.png" alt=""
-                                            style="width: 100%">
+                                        <img src="assets/img/ring-popular-1-resized.png" alt="" style="width: 100%">
                                     </div>
                                     <div class="badges">
                                         <div class="left">
@@ -1297,8 +1285,7 @@
                             <ons-card class="home-most-popular-card">
                                 <div class="img-group">
                                     <div class="img">
-                                        <img src="assets/img/ring-popular-1-resized.png" alt=""
-                                            style="width: 100%">
+                                        <img src="assets/img/ring-popular-1-resized.png" alt="" style="width: 100%">
                                     </div>
                                     <div class="badges">
                                         <div class="left">
@@ -1333,8 +1320,7 @@
                             <ons-card class="home-most-popular-card">
                                 <div class="img-group">
                                     <div class="img">
-                                        <img src="assets/img/ring-popular-1-resized.png" alt=""
-                                            style="width: 100%">
+                                        <img src="assets/img/ring-popular-1-resized.png" alt="" style="width: 100%">
                                     </div>
                                     <div class="badges">
                                         <div class="left">
@@ -1369,8 +1355,7 @@
                             <ons-card class="home-most-popular-card">
                                 <div class="img-group">
                                     <div class="img">
-                                        <img src="assets/img/ring-popular-1-resized.png" alt=""
-                                            style="width: 100%">
+                                        <img src="assets/img/ring-popular-1-resized.png" alt="" style="width: 100%">
                                     </div>
                                     <div class="badges">
                                         <div class="left">
@@ -1421,12 +1406,12 @@
                     //     page.querySelector('div class="ons-toolbar navbar" .center').innerHTML = page.data.title;
                     // }
 
-                    setInterval(function(){ 
+                    setInterval(function () {
                         var carouselCats = document.getElementById('carousel-cats');
-                        if (carouselCats.getActiveIndex() === carouselCats.itemCount-1)
+                        if (carouselCats.getActiveIndex() === carouselCats.itemCount - 1)
                             carouselCats.first();
                         else
-                            carouselCats.next(); 
+                            carouselCats.next();
                     }, 3000);
 
                 });
@@ -1479,7 +1464,8 @@
                 <div class="product-slider-images" style="height: 70%;">
 
                     <div class="carousel-container-for-main-image">
-                        <ons-carousel id="carousel-test" fullscreen swipeable auto-scroll overscrollable initial-index="0">
+                        <ons-carousel id="carousel-test" fullscreen swipeable auto-scroll overscrollable
+                            initial-index="0">
                             <ons-carousel-item class="carousel-item">
                                 <img src="assets/img/cart-product.png" alt="" style="width: 100%;">
                             </ons-carousel-item>
@@ -1489,10 +1475,11 @@
                             <ons-carousel-item class="carousel-item">
                                 <img src="assets/img/Ring-1.png" alt="" style="width: 100%;">
                                 <video class="video-main" autoplay loop muted style="width: 100%; display: none;"
-                                        src="assets/video/R_PTRG00451-PA1163%20(30CT).mp4" type="video/mp4">
+                                    src="assets/video/R_PTRG00451-PA1163%20(30CT).mp4" type="video/mp4">
                                 </video>
                                 <div class="fullscreen-btn">
-                                    <img src="assets/img/video-play-icon.png" alt="video-play-icon" style="width: 100px;">
+                                    <img src="assets/img/video-play-icon.png" alt="video-play-icon"
+                                        style="width: 100px;">
                                 </div>
                             </ons-carousel-item>
                         </ons-carousel>
@@ -1512,13 +1499,13 @@
                         <span id="dot2" class="dot" onclick="setActiveItem(2);">
                             <img src="assets/img/Ring-1.png" alt="" style="width: 100%;">
                         </span>
-                        
+
 
                     </div>
 
                 </div>
 
-                
+
 
                 <div class="product-description-product-page">
                     <div class="left">
@@ -1602,16 +1589,16 @@
                 var videoEle;
 
                 document.addEventListener('init', function (event) {
-
-                    carouselTest = document.getElementById('carousel-test');
                     
-                    setInterval(function(){ 
-                        if(carouselTest.getActiveIndex() === carouselTest.itemCount-1)
+                    carouselTest = document.getElementById('carousel-test');
+
+                    setInterval(function () {
+                        if (carouselTest.getActiveIndex() === carouselTest.itemCount - 1)
                             carouselTest.first();
                         else
-                            carouselTest.next(); 
+                            carouselTest.next();
                     }, 3000);
-                    
+
                     // for view in full screen
                     function enterFullScreen(element) {
                         if (element.requestFullscreen) {
@@ -1624,7 +1611,7 @@
                             element.msRequestFullscreen();      // IE/Edge
                         }
                     };
-                    
+
                     btnFullscreen = document.querySelector(".fullscreen-btn");
 
                     btnFullscreen.addEventListener("click", function () {
@@ -1644,7 +1631,7 @@
 
                 });
 
-                function setActiveItem(index){
+                function setActiveItem(index) {
                     carouselTest.setActiveIndex(index);
                 }
 
@@ -1792,7 +1779,7 @@
                 </div>
             </div>
 
-            
+
 
 
         </ons-page>
@@ -2139,4 +2126,5 @@
 
 
 <!-- Mirrored from metaverse.tech2edge.co/diyora-kiosk-sim/ by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 16 Oct 2023 06:01:57 GMT -->
+
 </html>
