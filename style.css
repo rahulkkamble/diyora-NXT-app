@@ -1667,6 +1667,15 @@ p.subheading {
 }
 
 
+/* back button fixed for android/material__label */
+/* ons-back-button.remove-icon .back-button__icon,
+ons-back-button.remove-icon .back-button--material__icon{
+    display: none;
+}
+
+ons-back-button.remove-icon .back-button--material__label {
+    display: block;
+} */
 
 
 
