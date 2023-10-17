@@ -412,20 +412,22 @@ ons-page {
 
 .carousel-buttons {
     position: absolute;
-    top: 15%;
+    top: 30%;
     transform: translateY(50%);
 
     width: 100%;
-    display: flex;
-    justify-content: space-between;
+    /* display: flex;
+    justify-content: space-between; */
 }
 
 .carousel-buttons .btn-next {
-    left: 0;
+    position: absolute;
+    right: 0;
 }
 
 .carousel-buttons .btn-prev {
-    right: 0;
+    position: absolute;
+    left: 0;
 }
 
 .swiper-slide,
@@ -1668,14 +1670,14 @@ p.subheading {
 
 
 /* back button fixed for android/material__label */
-/* ons-back-button.remove-icon .back-button__icon,
+ons-back-button.remove-icon .back-button__icon,
 ons-back-button.remove-icon .back-button--material__icon{
     display: none;
 }
 
 ons-back-button.remove-icon .back-button--material__label {
     display: block;
-} */
+}
 
 
 
