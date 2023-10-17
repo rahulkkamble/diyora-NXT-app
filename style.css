@@ -1197,6 +1197,7 @@ p.subheading {
     padding: 1.8rem;
     display: flex;
     gap: 1rem;
+    justify-content: space-evenly;
 }
 
 .product-buttons .btn-right,
@@ -1207,8 +1208,9 @@ p.subheading {
     justify-content: center;
     align-items: center;
     gap: 14px;
-    flex-shrink: 0;
-    width: 498.857px;
+    /* flex-shrink: 0; */
+    max-width: 498.857px;
+    width: 100%;
     border-radius: 10px;
     border: 2px solid #033432;
 }
