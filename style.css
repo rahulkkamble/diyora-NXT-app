@@ -544,7 +544,7 @@ ons-card .img-group .badges {
 
 .product-description {
     color: #7D7D7D;
-    font-family: 'Futura Std', sans-serif;
+    font-family: 'Futura Std';
     font-size: 12.827px;
     font-style: normal;
     font-weight: 400;
@@ -866,6 +866,8 @@ p.subheading {
     padding: 9.227px 15.818px;
     align-items: center;
     gap: 5.273px;
+    font-family: 'Futura Bk BT';
+    font-weight: 400;
 
     border-radius: 13.182px;
     border: 1.318px solid var(--border-color);
@@ -1166,14 +1168,14 @@ p.subheading {
 
 .gold-quality div, .customization-data div {
     padding: 1rem;
+    color: #7D7D7D;
     border-radius: 13.973px;
     text-align: center;
     font-family: Futura Bk BT;
     font-size: 22px;
     font-style: normal;
-    font-weight: 700;
+    font-weight: 400;
     line-height: 23.151px;
-    /* 114.321% */
     letter-spacing: 0.419px;
 }
 
@@ -1186,6 +1188,7 @@ p.subheading {
 .customization-data div:focus {
     background: #033432;
     color: #fff;
+    font-weight: 700;
 }
 
 .select-diamond, .select-size {
