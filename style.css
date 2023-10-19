@@ -716,7 +716,8 @@ ons-back-button.remove-icon {
     background-size: cover;
     width: 100%;
     background-position: center;
-    overflow: hidden;   /* after carousel added */
+    overflow: hidden;
+    /* after carousel added */
 }
 
 /* .earring-category-carousel  */
@@ -946,7 +947,8 @@ p.subheading {
 /* ================= P R O D U C T  --  I M A G E S ==================== */
 /* ================= P R O D U C T  --  I M A G E S ==================== */
 /* ================= P R O D U C T  --  I M A G E S ==================== */
-.product-showcase, .product-details-all {
+.product-showcase,
+.product-details-all {
     /* width: 1080px; */
     margin: auto;
     max-width: 1246px;
@@ -970,19 +972,22 @@ p.subheading {
 .product-showcase .product-main-image img,
 .product-showcase .product-main-image video {
     /* width: 150%; */
-    width: 100%;    /* after carousel added */
+    width: 100%;
+    /* after carousel added */
     height: 100%;
 }
 
 .product-showcase .product-main-image video {
     /* transform: scale(3) translateY(265px); */
-    transform: scale(3.5) translateY(207px);    /* after carousel inserted */
+    transform: scale(3.5) translateY(207px);
+    /* after carousel inserted */
 }
 
-.carousel-container-for-main-image ons-carousel-item{
+.carousel-container-for-main-image ons-carousel-item {
     position: relative;
 }
-.carousel-container-for-main-image ons-carousel-item .fullscreen-btn{
+
+.carousel-container-for-main-image ons-carousel-item .fullscreen-btn {
     width: 50px;
     height: 50px;
     position: absolute;
@@ -1042,7 +1047,7 @@ p.subheading {
     background: linear-gradient(0deg, #F8F8F8 0%, #F8F8F8 100%), url(assets/img/showcase-slide-image.png), #d3d3d3 0px 0px / 100% 100% no-repeat;
 }
 
-.variation-slide video{
+.variation-slide video {
     transform: scale(5) translateY(25px);
 }
 
@@ -1149,7 +1154,18 @@ p.subheading {
     border-radius: 13.973px;
 }
 
-.gold-quality, .customization-data {
+.color-options .color::before {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 22.264px;
+    height: 17.392px;
+    background-color: red;
+}
+
+.gold-quality,
+.customization-data {
     height: 55.89px;
     display: flex;
     flex-shrink: 0;
@@ -1161,12 +1177,14 @@ p.subheading {
 
 }
 
-.gold-quality, .customization-data div {
+.gold-quality,
+.customization-data div {
     border-radius: 13.973px;
     border: 1.397px solid #7D7D7D;
 }
 
-.gold-quality div, .customization-data div {
+.gold-quality div,
+.customization-data div {
     padding: 1rem;
     color: #7D7D7D;
     border-radius: 13.973px;
@@ -1191,7 +1209,8 @@ p.subheading {
     font-weight: 700;
 }
 
-.select-diamond, .select-size {
+.select-diamond,
+.select-size {
     display: flex;
 
 }
@@ -1676,7 +1695,7 @@ p.subheading {
 
 /* back button fixed for android/material__label */
 ons-back-button.remove-icon .back-button__icon,
-ons-back-button.remove-icon .back-button--material__icon{
+ons-back-button.remove-icon .back-button--material__icon {
     display: none;
 }
 
