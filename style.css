@@ -1154,14 +1154,22 @@ p.subheading {
     border-radius: 13.973px;
 }
 
-.color-options .color::before {
+.color-options .color.active,
+.color-options .color:active,
+.color-options .color:focus{
+    border: 2.795px solid #FFF;
+}
+
+.color-options .color.active::before,
+.color-options .color:active::before,
+.color-options .color:focus::before {
     content: "";
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    width: 22.264px;
-    height: 17.392px;
-    background-color: red;
+    display: block;
+    transform: translate(90%, 100%) rotate(-45deg);
+    width: 18.264px;
+    height: 10.392px;
+    border-left: 4px solid #fff;
+    border-bottom: 4px solid #fff;
 }
 
 .gold-quality,
