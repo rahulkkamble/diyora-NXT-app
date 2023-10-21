@@ -404,6 +404,7 @@ ons-page {
 
 .carousel-most-popular .swiper-wrapper {
     justify-content: center;
+    gap: 12px;
 }
 
 .carousel-most-popular {
@@ -432,8 +433,7 @@ ons-page {
 
 .swiper-slide,
 .product-card-wrapper {
-    padding: 0 1rem;
-    width: 235px;
+    width: 240px;
     height: 330px;
     font-size: 18px;
     display: flex;
@@ -856,11 +856,12 @@ p.subheading {
     display: inline-flex;
     flex-wrap: wrap;
     align-items: center;
-    /* justify-content: center; */
+    justify-content: start;
     gap: 8px;
 }
 
 .filter-row .filter-badge {
+    color: #7D7D7D;
     display: flex;
     flex-shrink: 0;
     height: 47px;
@@ -872,6 +873,33 @@ p.subheading {
 
     border-radius: 13.182px;
     border: 1.318px solid var(--border-color);
+}
+
+.filter-row .filter-badge.active,
+.filter-row .filter-badge:active,
+.filter-row .filter-badge:focus{
+    background: #033432;
+    color: #FFF;
+}
+
+.filter-badge.quality-options{
+    width: 137px;
+    padding: 0;
+    justify-content: center;
+    gap: 0;
+}
+
+.filter-badge.quality-options div{
+    padding: 14px 10px;
+    height: 47px;
+    border-radius: 13.81px;
+}
+
+.filter-badge.quality-options div.active,
+.filter-badge.quality-options div:active
+.filter-badge.quality-options div:focus{
+    background: #033432;
+    color: #FFF;
 }
 
 .filter-badge .circle {
@@ -1241,7 +1269,7 @@ p.subheading {
     /* flex-shrink: 0; */
     max-width: 498.857px;
     width: 100%;
-    border-radius: 10px;
+    border-radius: 17.143px;
     border: 2px solid #033432;
 }
 
