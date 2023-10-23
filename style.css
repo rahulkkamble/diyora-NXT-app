@@ -434,7 +434,7 @@ ons-page {
 .swiper-slide,
 .product-card-wrapper {
     width: 240px;
-    height: 330px;
+    height: 340px;
     font-size: 18px;
     display: flex;
     justify-content: center;
@@ -539,7 +539,7 @@ ons-card .img-group .badges {
     line-height: 13.333px;
     /* 90.954% */
     letter-spacing: 0.66px;
-    margin-bottom: .35rem;
+    margin-bottom: .5rem;
 }
 
 .product-description {
@@ -883,14 +883,14 @@ p.subheading {
 }
 
 .filter-badge.quality-options{
-    width: 137px;
+    width: 175px;
     padding: 0;
     justify-content: center;
     gap: 0;
 }
 
 .filter-badge.quality-options div{
-    padding: 14px 10px;
+    padding: 14px 16px;
     height: 47px;
     border-radius: 13.81px;
 }
@@ -929,13 +929,17 @@ p.subheading {
     flex-wrap: wrap;
     /* flex-direction: column; */
     align-content: flex-start;
-    column-gap: 36px;
-    flex-shrink: 0;
+    column-gap: 15px;
 }
 
 .product-card-wrapper {
     padding: 0;
     width: 229px;
+}
+
+.products-result .product-card-wrapper{
+    padding: 0;
+    width: 250px;
 }
 
 /* for who section category page */
@@ -986,7 +990,7 @@ p.subheading {
 
 .product-showcase .product-main-image {
     /* height: calc(1080px - 140px); */
-    height: 800px;
+    height: 1080px;
     width: 1080px;
     flex-shrink: 0;
     display: flex;
