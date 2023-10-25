@@ -1225,6 +1225,7 @@ p.subheading {
 
 .gold-quality div,
 .customization-data div {
+    transition: all 0.3s ease-in-out;
     padding: 1rem;
     color: #7D7D7D;
     border-radius: 13.973px;

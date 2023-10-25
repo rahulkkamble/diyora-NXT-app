@@ -1305,8 +1305,8 @@
                             </div>
                         </div>
                         <div class="gold-quality">
-                            <div class="14kt ">14kt</div>
-                            <div class="18kt active">18kt</div>
+                            <div class="q14kt ">14kt</div>
+                            <div class="q18kt active">18kt</div>
                         </div>
                     </div>
                     <div class="select-diamond">
@@ -1498,9 +1498,28 @@
                 </div>
             </div>
 
+            <script>
+                // make active
+                // Get references to the elements
+                var goldQualityDiv = document.querySelector('.gold-quality');
+                var qualityElements = goldQualityDiv.querySelectorAll('.gold-quality div');
+
+                // Add click event listeners to the elements
+                qualityElements.forEach(element => {
+                    element.addEventListener('click', () => {
+                        // Remove the 'active' class from all quality elements
+                        qualityElements.forEach(qualityElement => {
+                            qualityElement.classList.remove('active');
+                        });
+
+                        // Add the 'active' class to the clicked element
+                        element.classList.add('active');
+                    });
+                });
+            </script>
         </ons-page>
     </template>
-    
+
     <!-- cart modal -->
     <ons-modal direction="up">
         <div class="cart-visible-area">
