@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,21 +6,13 @@
     <meta charset="UTF-8">
     <title>Diyora NXT</title>
 
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
-
     <!-- onsen starter css -->
-    <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsenui.css">
-    <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsen-css-components.min.css">
-
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/9.4.1/swiper-bundle.min.css" rel="stylesheet" />
-
+    <link rel="stylesheet" href="assets/css/onsenui2.min.css">
+    
     <!-- onsen starter js -->
-    <script src="https://unpkg.com/onsenui/js/onsenui.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/9.4.1/swiper-bundle.min.js"></script>
+    <script src="assets/js/onsenui.min.js"></script>
 
-    <!-- style.css -->
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" type="text/css" href="fonts.css">
+    <link rel="stylesheet" href="assets/css/style.css?v=1.1">
 
 </head>
 
@@ -49,20 +42,12 @@
                         <img src="assets/img/wishlist-heart-shape.svg" alt="wishlist-heart-shape">
                     </ons-button>
                 </div>
-
             </div>
 
             <!-- carousel onsen -->
             <ons-carousel swipeable auto-scroll overscrollable auto-refresh id="carousel" class="home-carousel"
                 style="height: 396px;">
                 <ons-carousel-item style="background-image: url(assets/img/portrait-girl-h396.png);">
-
-                </ons-carousel-item>
-                <ons-carousel-item style="background-color: #373B44;">
-
-                </ons-carousel-item>
-                <ons-carousel-item style="background-color: #D38312;">
-
                 </ons-carousel-item>
             </ons-carousel>
 
@@ -75,47 +60,47 @@
                 </div>
                 <div class="more-content">
                     <div class="card-wrapper">
-                        <ons-card id="ringCategory" class="home-category-cards">
+                        <ons-card id="ringCategory" class="home-category-cards" onclick="navCat();">
                             <div class="img-box px-2 pt-5">
-                                <img src="assets/img/Ring-category-full.png" alt="Onsen UI" style="width: 100%">
+                                <img src="assets/img/Ring-category-full.png" alt="" style="width: 100%">
                             </div>
                             <div class="title">
                                 RINGS
                             </div>
                         </ons-card>
-                        <ons-card id="earringsCategory" class="home-category-cards">
-                            <div class="img-box"><img src="assets/img/earing-category-full.png" alt="Onsen UI"
+                        <ons-card id="earringsCategory" class="home-category-cards" onclick="navCat();">
+                            <div class="img-box"><img src="assets/img/earing-category-full.png" alt=""
                                     style="width: 100%">
                             </div>
                             <div class="title">
                                 EARRINGS
                             </div>
                         </ons-card>
-                        <ons-card class="home-category-cards">
+                        <ons-card class="home-category-cards" onclick="navCat();">
                             <div class="img-box pb-4-5rem pe-3"><img src="assets/img/pendants-category-full.png"
-                                    alt="Onsen UI" style="width: 100%">
+                                    alt="" style="width: 100%">
                             </div>
                             <div class="title">
                                 PENDANTS
                             </div>
                         </ons-card>
-                        <ons-card class="home-category-cards">
-                            <div class="img-box px-2"><img src="assets/img/bracelets-category-full.png" alt="Onsen UI"
+                        <ons-card class="home-category-cards" onclick="navCat();">
+                            <div class="img-box px-2"><img src="assets/img/bracelets-category-full.png" alt=""
                                     style="width: 100%"></div>
                             <div class="title">
                                 BRACELETS
                             </div>
                         </ons-card>
-                        <ons-card class="home-category-cards">
-                            <div class="img-box"><img src="assets/img/bangles-category-full.png" alt="Onsen UI"
+                        <ons-card class="home-category-cards" onclick="navCat();">
+                            <div class="img-box"><img src="assets/img/bangles-category-full.png" alt=""
                                     style="width: 100%"></div>
                             <div class="title">
                                 BANGLES
                             </div>
                         </ons-card>
-                        <ons-card class="home-category-cards">
+                        <ons-card class="home-category-cards" onclick="navCat();">
                             <div class="img-box pb-4-5rem"><img src="assets/img/necklace-category-full.png"
-                                    alt="Onsen UI" style="width: 110%"></div>
+                                    alt="" style="width: 110%"></div>
                             <div class="title">
                                 NECKLACE
                             </div>
@@ -128,13 +113,21 @@
                 document.addEventListener('init', function (event) {
                     var page = event.target;
 
-                    if (page.id === 'homePage') {
+                    /* if (page.id === 'homePage') {
                         page.querySelector('#earringsCategory').onclick = function () {
                             console.log('clicked on earringsCategory')
                             document.querySelector('#myNavigator').pushPage('category-earring.html', { data: { title: 'EarRing Category' } });
                         };
-                    }
+                    } */
+                    // else if (page.id === 'category-earring') {
+                    //     page.querySelector('div class="ons-toolbar navbar" .center').innerHTML = page.data.title;
+                    // }
                 });
+
+                function navCat(){
+                    document.querySelector('#myNavigator').pushPage('category-earring.html', { data: { title: 'EarRing Category' } });
+                }
+
             </script>
 
             <!-- Most Popular section from Homepage -->
@@ -148,11 +141,11 @@
                     <ons-carousel swipeable auto-scroll overscrollable id="carouselMostPopular">
                         <ons-carousel-item>
                             <div class="swiper-wrapper">
-                                <div class="swiper-slide">
+                                <div class="swiper-slide" onclick="navProd();">
                                     <ons-card class="home-most-popular-card">
                                         <div class="img-group">
                                             <div class="img">
-                                                <img src="assets/img/ring-popular-1-resized.png" alt="Onsen UI"
+                                                <img src="assets/img/ring-popular-1-resized.png" alt=""
                                                     style="width: 100%">
                                             </div>
                                             <div class="badges">
@@ -184,11 +177,11 @@
                                         </div>
                                     </ons-card>
                                 </div>
-                                <div class="swiper-slide">
+                                <div class="swiper-slide" onclick="navProd();">
                                     <ons-card class="home-most-popular-card">
                                         <div class="img-group">
                                             <div class="img">
-                                                <img src="assets/img/ring-popular-1-resized.png" alt="Onsen UI"
+                                                <img src="assets/img/ring-popular-1-resized.png" alt=""
                                                     style="width: 100%">
                                             </div>
                                             <div class="badges">
@@ -220,11 +213,11 @@
                                         </div>
                                     </ons-card>
                                 </div>
-                                <div class="swiper-slide">
+                                <div class="swiper-slide" onclick="navProd();">
                                     <ons-card class="home-most-popular-card">
                                         <div class="img-group">
                                             <div class="img">
-                                                <img src="assets/img/ring-popular-1-resized.png" alt="Onsen UI"
+                                                <img src="assets/img/ring-popular-1-resized.png" alt=""
                                                     style="width: 100%">
                                             </div>
                                             <div class="badges">
@@ -256,11 +249,11 @@
                                         </div>
                                     </ons-card>
                                 </div>
-                                <div class="swiper-slide">
+                                <div class="swiper-slide" onclick="navProd();">
                                     <ons-card class="home-most-popular-card">
                                         <div class="img-group">
                                             <div class="img">
-                                                <img src="assets/img/ring-popular-1-resized.png" alt="Onsen UI"
+                                                <img src="assets/img/ring-popular-1-resized.png" alt=""
                                                     style="width: 100%">
                                             </div>
                                             <div class="badges">
@@ -296,11 +289,11 @@
                         </ons-carousel-item>
                         <ons-carousel-item>
                             <div class="swiper-wrapper">
-                                <div class="swiper-slide">
+                                <div class="swiper-slide" onclick="navProd();">
                                     <ons-card class="home-most-popular-card">
                                         <div class="img-group">
                                             <div class="img">
-                                                <img src="assets/img/ring-popular-1-resized.png" alt="Onsen UI"
+                                                <img src="assets/img/ring-popular-1-resized.png" alt=""
                                                     style="width: 100%">
                                             </div>
                                             <div class="badges">
@@ -332,11 +325,11 @@
                                         </div>
                                     </ons-card>
                                 </div>
-                                <div class="swiper-slide">
+                                <div class="swiper-slide" onclick="navProd();">
                                     <ons-card class="home-most-popular-card">
                                         <div class="img-group">
                                             <div class="img">
-                                                <img src="assets/img/ring-popular-1-resized.png" alt="Onsen UI"
+                                                <img src="assets/img/ring-popular-1-resized.png" alt=""
                                                     style="width: 100%">
                                             </div>
                                             <div class="badges">
@@ -368,11 +361,11 @@
                                         </div>
                                     </ons-card>
                                 </div>
-                                <div class="swiper-slide">
+                                <div class="swiper-slide" onclick="navProd();">
                                     <ons-card class="home-most-popular-card">
                                         <div class="img-group">
                                             <div class="img">
-                                                <img src="assets/img/ring-popular-1-resized.png" alt="Onsen UI"
+                                                <img src="assets/img/ring-popular-1-resized.png" alt=""
                                                     style="width: 100%">
                                             </div>
                                             <div class="badges">
@@ -404,11 +397,11 @@
                                         </div>
                                     </ons-card>
                                 </div>
-                                <div class="swiper-slide">
+                                <div class="swiper-slide" onclick="navProd();">
                                     <ons-card class="home-most-popular-card">
                                         <div class="img-group">
                                             <div class="img">
-                                                <img src="assets/img/ring-popular-1-resized.png" alt="Onsen UI"
+                                                <img src="assets/img/ring-popular-1-resized.png" alt=""
                                                     style="width: 100%">
                                             </div>
                                             <div class="badges">
@@ -471,16 +464,16 @@
 
                 <script>
                     var carousel = document.getElementById('carouselMostPopular');
-                    var carouselVariation = document.getElementById('carouselVariation');
+                    // var carouselVariation = document.getElementById('carouselVariation');
 
                     var prev = function () {
                         carousel.prev();
-                        carouselVariation.prev();
+                        // carouselVariation.prev();
                     };
 
                     var next = function () {
                         carousel.next();
-                        carouselVariation.next();
+                        // carouselVariation.next();
                     };
 
                     ons.ready(function () {
@@ -489,31 +482,333 @@
                         });
                     });
 
-                    document.querySelectorAll('.home-most-popular-card').forEach(element => {
-                        element.onclick = function () {
-                            console.log('clicked on card having className .home-most-popular-card,')
-                            document.querySelector('#myNavigator').pushPage('product-page.html', { data: { title: 'Product' } });
-                        };
-                    });
+                    function navProd() {
+                        document.querySelector('#myNavigator').pushPage('product-page.html', { data: { title: 'Product' } });
+                    }
+
                 </script>
 
+                <!-- == auto scroll most popular section == -->
+                <!-- <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <ons-card class="home-most-popular-card">
+                                <div class="img-group">
+                                    <div class="img">
+                                        <img src="assets/img/ring-popular-1-resized.png" alt=""
+                                            style="width: 100%">
+                                    </div>
+                                    <div class="badges">
+                                        <div class="left">
+                                            <div class="tag offer-green">
+                                                <p>30% Off</p>
+                                            </div>
+                                        </div>
+                                        <div class="heart-shape">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="37" height="37"
+                                                viewBox="0 0 37 37" fill="none">
+                                                <circle cx="18.5" cy="18.5" r="18.5" fill="white" />
+                                                <path
+                                                    d="M18.1 26.55L18 26.65L17.89 26.55C13.14 22.24 10 19.39 10 16.5C10 14.5 11.5 13 13.5 13C15.04 13 16.54 14 17.07 15.36H18.93C19.46 14 20.96 13 22.5 13C24.5 13 26 14.5 26 16.5C26 19.39 22.86 22.24 18.1 26.55ZM22.5 11C20.76 11 19.09 11.81 18 13.08C16.91 11.81 15.24 11 13.5 11C10.42 11 8 13.41 8 16.5C8 20.27 11.4 23.36 16.55 28.03L18 29.35L19.45 28.03C24.6 23.36 28 20.27 28 16.5C28 13.41 25.58 11 22.5 11Z"
+                                                    fill="#7D7D7D" />
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="content">
+                                    <p class="product-title">3-Hook Prong Solitaire</p>
+                                    <p class="text-muted product-description">Studsin Sterling Silver with Diamond 7.5mm
+                                    </p>
+                                    <div class="price-breakup">
+                                        <p>₹53,423</p>
+                                        <p class="text-muted cut-price">₹76,318</p>
+                                    </div>
+                                </div>
+                            </ons-card>
+                        </div>
+                        <div class="swiper-slide">
+                            <ons-card class="home-most-popular-card">
+                                <div class="img-group">
+                                    <div class="img">
+                                        <img src="assets/img/ring-popular-1-resized.png" alt=""
+                                            style="width: 100%">
+                                    </div>
+                                    <div class="badges">
+                                        <div class="left">
+                                            <div class="tag remark-salmon-pink">
+                                                <p>Bestseller</p>
+                                            </div>
+                                        </div>
+                                        <div class="heart-shape">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="37" height="37"
+                                                viewBox="0 0 37 37" fill="none">
+                                                <circle cx="18.5" cy="18.5" r="18.5" fill="white" />
+                                                <path
+                                                    d="M18.1 26.55L18 26.65L17.89 26.55C13.14 22.24 10 19.39 10 16.5C10 14.5 11.5 13 13.5 13C15.04 13 16.54 14 17.07 15.36H18.93C19.46 14 20.96 13 22.5 13C24.5 13 26 14.5 26 16.5C26 19.39 22.86 22.24 18.1 26.55ZM22.5 11C20.76 11 19.09 11.81 18 13.08C16.91 11.81 15.24 11 13.5 11C10.42 11 8 13.41 8 16.5C8 20.27 11.4 23.36 16.55 28.03L18 29.35L19.45 28.03C24.6 23.36 28 20.27 28 16.5C28 13.41 25.58 11 22.5 11Z"
+                                                    fill="#7D7D7D" />
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="content">
+                                    <p class="product-title">3-Hook Prong Solitaire</p>
+                                    <p class="text-muted product-description">Studsin Sterling Silver with Diamond 7.5mm
+                                    </p>
+                                    <div class="price-breakup">
+                                        <p>₹53,423</p>
+                                        <p class="text-muted cut-price">₹76,318</p>
+                                    </div>
+                                </div>
+                            </ons-card>
+                        </div>
+                        <div class="swiper-slide">
+                            <ons-card class="home-most-popular-card">
+                                <div class="img-group">
+                                    <div class="img">
+                                        <img src="assets/img/ring-popular-1-resized.png" alt=""
+                                            style="width: 100%">
+                                    </div>
+                                    <div class="badges">
+                                        <div class="left">
+                                            <div class="tag remark-salmon-pink">
+                                                <p>Bestseller</p>
+                                            </div>
+                                        </div>
+                                        <div class="heart-shape">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="37" height="37"
+                                                viewBox="0 0 37 37" fill="none">
+                                                <circle cx="18.5" cy="18.5" r="18.5" fill="white" />
+                                                <path
+                                                    d="M18.1 26.55L18 26.65L17.89 26.55C13.14 22.24 10 19.39 10 16.5C10 14.5 11.5 13 13.5 13C15.04 13 16.54 14 17.07 15.36H18.93C19.46 14 20.96 13 22.5 13C24.5 13 26 14.5 26 16.5C26 19.39 22.86 22.24 18.1 26.55ZM22.5 11C20.76 11 19.09 11.81 18 13.08C16.91 11.81 15.24 11 13.5 11C10.42 11 8 13.41 8 16.5C8 20.27 11.4 23.36 16.55 28.03L18 29.35L19.45 28.03C24.6 23.36 28 20.27 28 16.5C28 13.41 25.58 11 22.5 11Z"
+                                                    fill="#7D7D7D" />
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="content">
+                                    <p class="product-title">3-Hook Prong Solitaire</p>
+                                    <p class="text-muted product-description">Studsin Sterling Silver with Diamond 7.5mm
+                                    </p>
+                                    <div class="price-breakup">
+                                        <p>₹53,423</p>
+                                        <p class="text-muted cut-price">₹76,318</p>
+                                    </div>
+                                </div>
+                            </ons-card>
+                        </div>
+                        <div class="swiper-slide">
+                            <ons-card class="home-most-popular-card">
+                                <div class="img-group">
+                                    <div class="img">
+                                        <img src="assets/img/ring-popular-1-resized.png" alt=""
+                                            style="width: 100%">
+                                    </div>
+                                    <div class="badges">
+                                        <div class="left">
+                                            <div class="tag offer-green">
+                                                <p>22% Off</p>
+                                            </div>
+                                        </div>
+                                        <div class="heart-shape">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="37" height="37"
+                                                viewBox="0 0 37 37" fill="none">
+                                                <circle cx="18.5" cy="18.5" r="18.5" fill="white" />
+                                                <path
+                                                    d="M18.1 26.55L18 26.65L17.89 26.55C13.14 22.24 10 19.39 10 16.5C10 14.5 11.5 13 13.5 13C15.04 13 16.54 14 17.07 15.36H18.93C19.46 14 20.96 13 22.5 13C24.5 13 26 14.5 26 16.5C26 19.39 22.86 22.24 18.1 26.55ZM22.5 11C20.76 11 19.09 11.81 18 13.08C16.91 11.81 15.24 11 13.5 11C10.42 11 8 13.41 8 16.5C8 20.27 11.4 23.36 16.55 28.03L18 29.35L19.45 28.03C24.6 23.36 28 20.27 28 16.5C28 13.41 25.58 11 22.5 11Z"
+                                                    fill="#7D7D7D" />
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="content">
+                                    <p class="product-title">3-Hook Prong Solitaire</p>
+                                    <p class="text-muted product-description">Studsin Sterling Silver with Diamond 7.5mm
+                                    </p>
+                                    <div class="price-breakup">
+                                        <p>₹53,423</p>
+                                        <p class="text-muted cut-price">₹76,318</p>
+                                    </div>
+                                </div>
+                            </ons-card>
+                        </div>
+                        <div class="swiper-slide">
+                            <ons-card class="home-most-popular-card">
+                                <div class="img-group">
+                                    <div class="img">
+                                        <img src="assets/img/ring-popular-1-resized.png" alt=""
+                                            style="width: 100%">
+                                    </div>
+                                    <div class="badges">
+                                        <div class="left">
+                                            <div class="tag offer-green">
+                                                <p>30% Off</p>
+                                            </div>
+                                        </div>
+                                        <div class="heart-shape">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="37" height="37"
+                                                viewBox="0 0 37 37" fill="none">
+                                                <circle cx="18.5" cy="18.5" r="18.5" fill="white" />
+                                                <path
+                                                    d="M18.1 26.55L18 26.65L17.89 26.55C13.14 22.24 10 19.39 10 16.5C10 14.5 11.5 13 13.5 13C15.04 13 16.54 14 17.07 15.36H18.93C19.46 14 20.96 13 22.5 13C24.5 13 26 14.5 26 16.5C26 19.39 22.86 22.24 18.1 26.55ZM22.5 11C20.76 11 19.09 11.81 18 13.08C16.91 11.81 15.24 11 13.5 11C10.42 11 8 13.41 8 16.5C8 20.27 11.4 23.36 16.55 28.03L18 29.35L19.45 28.03C24.6 23.36 28 20.27 28 16.5C28 13.41 25.58 11 22.5 11Z"
+                                                    fill="#7D7D7D" />
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="content">
+                                    <p class="product-title">3-Hook Prong Solitaire</p>
+                                    <p class="text-muted product-description">Studsin Sterling Silver with Diamond 7.5mm
+                                    </p>
+                                    <div class="price-breakup">
+                                        <p>₹53,423</p>
+                                        <p class="text-muted cut-price">₹76,318</p>
+                                    </div>
+                                </div>
+                            </ons-card>
+                        </div>
+                        <div class="swiper-slide">
+                            <ons-card class="home-most-popular-card">
+                                <div class="img-group">
+                                    <div class="img">
+                                        <img src="assets/img/ring-popular-1-resized.png" alt=""
+                                            style="width: 100%">
+                                    </div>
+                                    <div class="badges">
+                                        <div class="left">
+                                            <div class="tag offer-green">
+                                                <p>30% Off</p>
+                                            </div>
+                                        </div>
+                                        <div class="heart-shape">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="37" height="37"
+                                                viewBox="0 0 37 37" fill="none">
+                                                <circle cx="18.5" cy="18.5" r="18.5" fill="white" />
+                                                <path
+                                                    d="M18.1 26.55L18 26.65L17.89 26.55C13.14 22.24 10 19.39 10 16.5C10 14.5 11.5 13 13.5 13C15.04 13 16.54 14 17.07 15.36H18.93C19.46 14 20.96 13 22.5 13C24.5 13 26 14.5 26 16.5C26 19.39 22.86 22.24 18.1 26.55ZM22.5 11C20.76 11 19.09 11.81 18 13.08C16.91 11.81 15.24 11 13.5 11C10.42 11 8 13.41 8 16.5C8 20.27 11.4 23.36 16.55 28.03L18 29.35L19.45 28.03C24.6 23.36 28 20.27 28 16.5C28 13.41 25.58 11 22.5 11Z"
+                                                    fill="#7D7D7D" />
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="content">
+                                    <p class="product-title">3-Hook Prong Solitaire</p>
+                                    <p class="text-muted product-description">Studsin Sterling Silver with Diamond 7.5mm
+                                    </p>
+                                    <div class="price-breakup">
+                                        <p>₹53,423</p>
+                                        <p class="text-muted cut-price">₹76,318</p>
+                                    </div>
+                                </div>
+                            </ons-card>
+                        </div>
+                        <div class="swiper-slide">
+                            <ons-card class="home-most-popular-card">
+                                <div class="img-group">
+                                    <div class="img">
+                                        <img src="assets/img/ring-popular-1-resized.png" alt=""
+                                            style="width: 100%">
+                                    </div>
+                                    <div class="badges">
+                                        <div class="left">
+                                            <div class="tag offer-green">
+                                                <p>30% Off</p>
+                                            </div>
+                                        </div>
+                                        <div class="heart-shape">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="37" height="37"
+                                                viewBox="0 0 37 37" fill="none">
+                                                <circle cx="18.5" cy="18.5" r="18.5" fill="white" />
+                                                <path
+                                                    d="M18.1 26.55L18 26.65L17.89 26.55C13.14 22.24 10 19.39 10 16.5C10 14.5 11.5 13 13.5 13C15.04 13 16.54 14 17.07 15.36H18.93C19.46 14 20.96 13 22.5 13C24.5 13 26 14.5 26 16.5C26 19.39 22.86 22.24 18.1 26.55ZM22.5 11C20.76 11 19.09 11.81 18 13.08C16.91 11.81 15.24 11 13.5 11C10.42 11 8 13.41 8 16.5C8 20.27 11.4 23.36 16.55 28.03L18 29.35L19.45 28.03C24.6 23.36 28 20.27 28 16.5C28 13.41 25.58 11 22.5 11Z"
+                                                    fill="#7D7D7D" />
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="content">
+                                    <p class="product-title">3-Hook Prong Solitaire</p>
+                                    <p class="text-muted product-description">Studsin Sterling Silver with Diamond 7.5mm
+                                    </p>
+                                    <div class="price-breakup">
+                                        <p>₹53,423</p>
+                                        <p class="text-muted cut-price">₹76,318</p>
+                                    </div>
+                                </div>
+                            </ons-card>
+                        </div>
+                        <div class="swiper-slide">
+                            <ons-card class="home-most-popular-card">
+                                <div class="img-group">
+                                    <div class="img">
+                                        <img src="assets/img/ring-popular-1-resized.png" alt=""
+                                            style="width: 100%">
+                                    </div>
+                                    <div class="badges">
+                                        <div class="left">
+                                            <div class="tag offer-green">
+                                                <p>30% Off</p>
+                                            </div>
+                                        </div>
+                                        <div class="heart-shape">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="37" height="37"
+                                                viewBox="0 0 37 37" fill="none">
+                                                <circle cx="18.5" cy="18.5" r="18.5" fill="white" />
+                                                <path
+                                                    d="M18.1 26.55L18 26.65L17.89 26.55C13.14 22.24 10 19.39 10 16.5C10 14.5 11.5 13 13.5 13C15.04 13 16.54 14 17.07 15.36H18.93C19.46 14 20.96 13 22.5 13C24.5 13 26 14.5 26 16.5C26 19.39 22.86 22.24 18.1 26.55ZM22.5 11C20.76 11 19.09 11.81 18 13.08C16.91 11.81 15.24 11 13.5 11C10.42 11 8 13.41 8 16.5C8 20.27 11.4 23.36 16.55 28.03L18 29.35L19.45 28.03C24.6 23.36 28 20.27 28 16.5C28 13.41 25.58 11 22.5 11Z"
+                                                    fill="#7D7D7D" />
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="content">
+                                    <p class="product-title">3-Hook Prong Solitaire</p>
+                                    <p class="text-muted product-description">Studsin Sterling Silver with Diamond 7.5mm
+                                    </p>
+                                    <div class="price-breakup">
+                                        <p>₹53,423</p>
+                                        <p class="text-muted cut-price">₹76,318</p>
+                                    </div>
+                                </div>
+                            </ons-card>
+                        </div>
+                    </div>
+                    < !-- comment  Navigation arrows -- >
+                    <div class="swiper-button-next">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="70" viewBox="0 0 30 70" fill="none">
+                            <path d="M0 10C0 4.47715 4.47715 0 10 0H30V70H10C4.47715 70 0 65.5229 0 60V10Z"
+                                fill="#EBEBEB" />
+                            <path
+                                d="M9.38839 19.031C9.5669 19.0285 9.7439 19.0685 9.908 19.1486C10.0721 19.2286 10.2197 19.3467 10.3412 19.4955L22.5917 33.4316C23.1361 34.051 23.1361 35.011 22.5917 35.6304L10.3412 49.5355C9.79673 50.1548 8.95281 50.1548 8.40835 49.5355C7.86388 48.9161 7.86388 47.956 8.40835 47.3367L19.706 34.5155L8.40835 21.6633C7.86388 21.044 7.86388 20.0839 8.40835 19.4645C8.68058 19.1549 9.03448 19 9.36116 19L9.38839 19.031Z"
+                                fill="#A6A6A6" />
+                        </svg>
+                    </div>
+                    <div class="swiper-button-prev">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="70" viewBox="0 0 30 70" fill="none">
+                            <path d="M0 0H20C25.5228 0 30 4.47715 30 10V60C30 65.5229 25.5228 70 20 70H0V0Z"
+                                fill="#EBEBEB" />
+                            <path
+                                d="M20.6116 49.969C20.4331 49.9715 20.2561 49.9314 20.092 49.8514C19.9279 49.7714 19.7803 49.6533 19.6588 49.5045L7.40835 35.5684C6.86388 34.949 6.86388 33.989 7.40835 33.3696L19.6588 19.4645C20.2033 18.8452 21.0472 18.8452 21.5917 19.4645C22.1361 20.0839 22.1361 21.044 21.5917 21.6633L10.294 34.4845L21.5917 47.3367C22.1361 47.956 22.1361 48.9161 21.5917 49.5355C21.3194 49.8451 20.9655 50 20.6388 50L20.6116 49.969Z"
+                                fill="#A6A6A6" />
+                        </svg>
+                    </div>
+                </div> -->
             </div>
 
             <!-- for section -->
             <div class="for-who-section">
                 <div class="row">
                     <div class="cards-wrapper">
-                        <ons-card>
+                        <ons-card class="prod-category" onclick="navCat();">
                             <div class="relative">
-                                <img src="assets/img/boy-portrait-resized.png" alt="Onsen UI" style="width: 100%">
+                                <img src="assets/img/boy-portrait-resized.png" alt="" style="width: 100%">
                                 <div class="card-overlay">
                                     <h5 class="text-uppercase">FOR hiM</h5>
                                 </div>
                             </div>
                         </ons-card>
-                        <ons-card>
+                        <ons-card class="prod-category">
                             <div class="relative">
-                                <img src="assets/img/girls-portrait-resized.png" alt="Onsen UI" style="width: 100%">
+                                <img src="assets/img/girls-portrait-resized.png" alt="" style="width: 100%">
                                 <div class="card-overlay">
                                     <h5 class="text-uppercase">FOR her</h5>
                                 </div>
@@ -523,17 +818,17 @@
                 </div>
                 <div class="row second-row">
                     <div class="cards-wrapper">
-                        <ons-card>
+                        <ons-card class="prod-category" onclick="navCat();">
                             <div class="relative">
-                                <img src="assets/img/forKids-resized.png" alt="Onsen UI" style="width: 100%">
+                                <img src="assets/img/forKids-resized.png" alt="" style="width: 100%">
                                 <div class="card-overlay">
                                     <h5 class="text-uppercase">FOR kids</h5>
                                 </div>
                             </div>
                         </ons-card>
-                        <ons-card>
+                        <ons-card class="prod-category" onclick="navCat();">
                             <div class="relative">
-                                <img src="assets/img/gifting-resized.png" alt="Onsen UI" style="width: 100%">
+                                <img src="assets/img/gifting-resized.png" alt="" style="width: 100%">
                                 <div class="card-overlay">
                                     <h5 class="text-uppercase">Gifting</h5>
                                 </div>
@@ -543,6 +838,7 @@
                 </div>
             </div>
         </ons-page>
+
     </template>
 
     <template id="category-earring.html">
@@ -584,7 +880,7 @@
             </div>
 
             <!-- carousel onsen -->
-            <ons-carousel swipeable auto-scroll overscrollable auto-refresh id="carousel"
+            <ons-carousel swipeable auto-scroll overscrollable auto-refresh id="carousel-cats"
                 class="earring-category-carousel" style="height: 396px;">
                 <ons-carousel-item style="background-image: url(assets/img/portrait-girl-h396.png);">
                     <div class="cta-section">
@@ -680,7 +976,7 @@
                     <div class="card-wrapper-vertical">
                         <ons-card class="home-category-cards active">
                             <div class="img-box pt-1-25rem pe-3">
-                                <img src="assets/img/all-earings-category.png" alt="Onsen UI" style="width: 180%">
+                                <img src="assets/img/all-earings-category.png" alt="" style="width: 180%">
                             </div>
                             <div class="title">
                                 All earRINGS
@@ -688,7 +984,7 @@
                         </ons-card>
                         <ons-card class="home-category-cards">
                             <div class="img-box pb-2 ps-2-5rem">
-                                <img src="assets/img/drops-danglers-category.png" alt="Onsen UI" style="width: 160%">
+                                <img src="assets/img/drops-danglers-category.png" alt="" style="width: 160%">
                             </div>
                             <div class="title">
                                 DROPS & DANGLERS
@@ -696,7 +992,7 @@
                         </ons-card>
                         <ons-card class="home-category-cards">
                             <div class="img-box pt-1-25rem">
-                                <img src="assets/img/hoops-and-huggies-category.png" alt="Onsen UI" style="width: 180%">
+                                <img src="assets/img/hoops-and-huggies-category.png" alt="" style="width: 180%">
                             </div>
                             <div class="title">
                                 HOOPS & HUGGIES
@@ -704,7 +1000,7 @@
                         </ons-card>
                         <ons-card class="home-category-cards">
                             <div class="img-box ps-5">
-                                <img src="assets/img/studs-category.png" alt="Onsen UI" style="width: 140%">
+                                <img src="assets/img/studs-category.png" alt="" style="width: 140%">
                             </div>
                             <div class="title">
                                 STUDS
@@ -712,7 +1008,7 @@
                         </ons-card>
                         <ons-card class="home-category-cards">
                             <div class="img-box p-2-5rem">
-                                <img src="assets/img/front-and-back-category.png" alt="Onsen UI" style="width: 100%">
+                                <img src="assets/img/front-and-back-category.png" alt="" style="width: 100%">
                             </div>
                             <div class="title">
                                 FRONT & BACK
@@ -724,12 +1020,12 @@
                 <!-- right side filter and product listed -->
                 <div class="right-side-cards-section">
                     <!-- for section // for gift page -->
-                    <div class="for-who-section d-noe category-page pb-0">
+                    <div class="for-who-section d-none category-page pb-0">
                         <div class="row second-row">
                             <div class="cards-wrapper">
                                 <ons-card>
                                     <div class="relative">
-                                        <img src="assets/img/boy-portrait-resized.png" alt="Onsen UI"
+                                        <img src="assets/img/boy-portrait-resized.png" alt=""
                                             style="width: 100%">
                                         <div class="card-overlay">
                                             <h5 class="text-uppercase">FOR HIM</h5>
@@ -738,7 +1034,7 @@
                                 </ons-card>
                                 <ons-card class="active">
                                     <div class="relative">
-                                        <img src="assets/img/girls-portrait-resized.png" alt="Onsen UI"
+                                        <img src="assets/img/girls-portrait-resized.png" alt=""
                                             style="width: 100%">
                                         <div class="card-overlay">
                                             <h5 class="text-uppercase">For Her</h5>
@@ -751,7 +1047,7 @@
                     <!-- filters -->
                     <div class="filter-row">
                         <p>Filters:</p>
-                        <div class="filter-badge active">
+                        <div class="filter-badge">
                             All Metals
                         </div>
                         <div class="filter-badge">
@@ -766,10 +1062,8 @@
                             <div class="circle bg-white-gold"></div>
                             White Gold
                         </div>
-                        <div class="filter-badge quality-options">
-                            <div class="active">All</div>
-                            <div>14kt</div>
-                            <div>18kt</div>
+                        <div class="filter-badge">
+                            All 14kt 18kt
                         </div>
                     </div>
                     <!-- listed products -->
@@ -778,7 +1072,7 @@
                             <ons-card class="home-most-popular-card">
                                 <div class="img-group">
                                     <div class="img">
-                                        <img src="assets/img/ring-popular-1-resized.png" alt="Onsen UI"
+                                        <img src="assets/img/ring-popular-1-resized.png" alt=""
                                             style="width: 100%">
                                     </div>
                                     <div class="badges">
@@ -814,7 +1108,7 @@
                             <ons-card class="home-most-popular-card">
                                 <div class="img-group">
                                     <div class="img">
-                                        <img src="assets/img/ring-popular-1-resized.png" alt="Onsen UI"
+                                        <img src="assets/img/ring-popular-1-resized.png" alt=""
                                             style="width: 100%">
                                     </div>
                                     <div class="badges">
@@ -850,7 +1144,7 @@
                             <ons-card class="home-most-popular-card">
                                 <div class="img-group">
                                     <div class="img">
-                                        <img src="assets/img/ring-popular-1-resized.png" alt="Onsen UI"
+                                        <img src="assets/img/ring-popular-1-resized.png" alt=""
                                             style="width: 100%">
                                     </div>
                                     <div class="badges">
@@ -886,7 +1180,7 @@
                             <ons-card class="home-most-popular-card">
                                 <div class="img-group">
                                     <div class="img">
-                                        <img src="assets/img/ring-popular-1-resized.png" alt="Onsen UI"
+                                        <img src="assets/img/ring-popular-1-resized.png" alt=""
                                             style="width: 100%">
                                     </div>
                                     <div class="badges">
@@ -922,7 +1216,7 @@
                             <ons-card class="home-most-popular-card">
                                 <div class="img-group">
                                     <div class="img">
-                                        <img src="assets/img/ring-popular-1-resized.png" alt="Onsen UI"
+                                        <img src="assets/img/ring-popular-1-resized.png" alt=""
                                             style="width: 100%">
                                     </div>
                                     <div class="badges">
@@ -958,7 +1252,7 @@
                             <ons-card class="home-most-popular-card">
                                 <div class="img-group">
                                     <div class="img">
-                                        <img src="assets/img/ring-popular-1-resized.png" alt="Onsen UI"
+                                        <img src="assets/img/ring-popular-1-resized.png" alt=""
                                             style="width: 100%">
                                     </div>
                                     <div class="badges">
@@ -994,7 +1288,7 @@
                             <ons-card class="home-most-popular-card">
                                 <div class="img-group">
                                     <div class="img">
-                                        <img src="assets/img/ring-popular-1-resized.png" alt="Onsen UI"
+                                        <img src="assets/img/ring-popular-1-resized.png" alt=""
                                             style="width: 100%">
                                     </div>
                                     <div class="badges">
@@ -1030,7 +1324,7 @@
                             <ons-card class="home-most-popular-card">
                                 <div class="img-group">
                                     <div class="img">
-                                        <img src="assets/img/ring-popular-1-resized.png" alt="Onsen UI"
+                                        <img src="assets/img/ring-popular-1-resized.png" alt=""
                                             style="width: 100%">
                                     </div>
                                     <div class="badges">
@@ -1066,7 +1360,7 @@
                             <ons-card class="home-most-popular-card">
                                 <div class="img-group">
                                     <div class="img">
-                                        <img src="assets/img/ring-popular-1-resized.png" alt="Onsen UI"
+                                        <img src="assets/img/ring-popular-1-resized.png" alt=""
                                             style="width: 100%">
                                     </div>
                                     <div class="badges">
@@ -1114,8 +1408,21 @@
                             };
                         });
                     }
+                    // else if (page.id === 'category-earring') {
+                    //     page.querySelector('div class="ons-toolbar navbar" .center').innerHTML = page.data.title;
+                    // }
+
+                    setInterval(function(){ 
+                        var carouselCats = document.getElementById('carousel-cats');
+                        if (carouselCats.getActiveIndex() === carouselCats.itemCount-1)
+                            carouselCats.setActiveIndex(0);
+                        else
+                            carouselCats.next(); 
+                    }, 3000);
+
                 });
             </script>
+
         </ons-page>
 
     </template>
@@ -1159,129 +1466,47 @@
 
             <!-- product image -->
             <div class="product-showcase">
-                <div class="product-slider-images">
-                    <div class="product-main-image">
-                        <div class="carousel-container-for-main-image" style="width: 100%;">
-                            <ons-carousel swipeable auto-scroll overscrollable auto-refresh
-                                class="earring-category-carousel" id="carouselMainImage">
-                                <ons-carousel-item>
-                                    <video class="video-main" autoplay loop muted
+
+                <div class="product-slider-images" style="height: 70%;">
+
+                    <div class="carousel-container-for-main-image">
+                        <ons-carousel id="carousel-test" fullscreen swipeable auto-scroll overscrollable initial-index="0">
+                            <ons-carousel-item class="carousel-item">
+                                <img src="assets/img/cart-product.png" alt="" style="width: 100%;">
+                            </ons-carousel-item>
+                            <ons-carousel-item class="carousel-item">
+                                <img src="assets/img/showcase-slide-image.png" alt="" style="width: 100%;">
+                            </ons-carousel-item>
+                            <ons-carousel-item class="carousel-item">
+                                <img src="assets/img/Ring-1.png" alt="" style="width: 100%;">
+                                <video class="video-main" autoplay loop muted style="width: 100%; display: none;"
                                         src="assets/video/R_PTRG00451-PA1163 (30CT).mp4" type="video/mp4">
-                                    </video>
-                                    <div class="fullscreen-btn">
-                                        <img src="assets/img/video-play-icon.png" alt="video-play-icon">
-                                    </div>
-                                    <!-- <img src="assets/img/product-showcase-1.png" alt=""> -->
-                                </ons-carousel-item>
-                                <ons-carousel-item>
-                                    <img src="assets/img/product-showcase-1.png" alt="">
-                                </ons-carousel-item>
-                                <ons-carousel-item>
-                                    <img src="assets/img/product-showcase-1.png" alt="">
-                                </ons-carousel-item>
-                            </ons-carousel>
-                        </div>
+                                </video>
+                                <div class="fullscreen-btn">
+                                    <img src="assets/img/video-play-icon.png" alt="video-play-icon" style="width: 100px;">
+                                </div>
+                            </ons-carousel-item>
+                        </ons-carousel>
+
                     </div>
+
                     <div class="sliding-varient-images">
 
-                        <ons-carousel swipeable auto-scroll overscrollable auto-refresh id="carouselVariation"
-                            class="earring-category-carousel">
-                            <ons-carousel-item>
-                                <div class="varient-image-wrapper">
-                                    <div class="variation-slide">
-                                        <img src="assets/img/showcase-slide-image.png" alt="bottom-slide-image">
-                                    </div>
-                                    <div class="variation-slide">
-                                        <img src="assets/img/showcase-slide-image.png" alt="bottom-slide-image">
-                                    </div>
-                                    <div class="variation-slide">
-                                        <img src="assets/img/showcase-slide-image.png" alt="bottom-slide-image">
-                                    </div>
-                                    <div class="variation-slide">
-                                        <video autoplay loop muted>
-                                            <source src="assets/video/R_PTRG00451-PA1163 (30CT).mp4" type="video/mp4" />
-                                        </video>
-                                    </div>
-                                    <div class="variation-slide">
-                                        <img src="assets/img/showcase-slide-image.png" alt="bottom-slide-image">
-                                    </div>
-                                    <div class="variation-slide">
-                                        <img src="assets/img/showcase-slide-image.png" alt="bottom-slide-image">
-                                    </div>
-                                    <div class="variation-slide">
-                                        <img src="assets/img/showcase-slide-image.png" alt="bottom-slide-image">
-                                    </div>
-                                </div>
-                            </ons-carousel-item>
-                            <ons-carousel-item>
-                                <div class="varient-image-wrapper">
-                                    <div class="variation-slide">
-                                        <img src="assets/img/showcase-slide-image.png" alt="bottom-slide-image">
-                                    </div>
-                                    <div class="variation-slide">
-                                        <img src="assets/img/showcase-slide-image.png" alt="bottom-slide-image">
-                                    </div>
-                                    <div class="variation-slide">
-                                        <img src="assets/img/showcase-slide-image.png" alt="bottom-slide-image">
-                                    </div>
-                                    <div class="variation-slide">
-                                        <img src="assets/img/showcase-slide-image.png" alt="bottom-slide-image">
-                                    </div>
-                                    <div class="variation-slide">
-                                        <img src="assets/img/showcase-slide-image.png" alt="bottom-slide-image">
-                                    </div>
-                                    <div class="variation-slide">
-                                        <img src="assets/img/showcase-slide-image.png" alt="bottom-slide-image">
-                                    </div>
-                                    <div class="variation-slide">
-                                        <img src="assets/img/showcase-slide-image.png" alt="bottom-slide-image">
-                                    </div>
-                                </div>
-                            </ons-carousel-item>
+                        <span id="dot0" class="dot" onclick="setActiveItem(0);">
+                            <img src="assets/img/cart-product.png" alt="" style="width: 100%;">
+                        </span>
 
-                        </ons-carousel>
-                        <div class="variation-carousel-buttons">
-                            <div class="slide-prev-btn" onclick="prev()">
-                                <img src="assets/img/Button - Prev slide.svg" alt="">
-                            </div>
-                            <div class="slide-next-btn" onclick="next()">
-                                <img src="assets/img/Button - Next slide.svg" alt="">
-                            </div>
-                        </div>
+                        <span id="dot1" class="dot" onclick="setActiveItem(1);">
+                            <img src="assets/img/showcase-slide-image.png" alt="" style="width: 100%;">
+                        </span>
 
-                        <script>
-                            var carouselVariation = document.getElementById('carouselVariation');
+                        <span id="dot2" class="dot" onclick="setActiveItem(2);">
+                            <img src="assets/img/Ring-1.png" alt="" style="width: 100%;">
+                        </span>
+                        
 
-                            var prev = function () {
-                                carouselVariation.prev();
-                            };
-
-                            var next = function () {
-                                carouselVariation.next();
-                            };
-
-                            // for view in full screen
-                            function enterFullScreen(element) {
-                                if (element.requestFullscreen) {
-                                    element.requestFullscreen();
-                                } else if (element.mozRequestFullScreen) {
-                                    element.mozRequestFullScreen();     // Firefox
-                                } else if (element.webkitRequestFullscreen) {
-                                    element.webkitRequestFullscreen();  // Safari
-                                } else if (element.msRequestFullscreen) {
-                                    element.msRequestFullscreen();      // IE/Edge
-                                }
-                            };
-                            // Check if the function or variable exists before defining it
-                            if (typeof btnFullProduct === 'undefined') {
-                                let btnFullProduct = document.querySelector(".fullscreen-btn");
-                                btnFullProduct.addEventListener("click", function () {
-                                    let videoEle = document.querySelector('.video-main');
-                                    enterFullScreen(videoEle);
-                                });
-                            }
-                        </script>
                     </div>
+
                 </div>
 
                 <div class="product-description-product-page">
@@ -1294,19 +1519,20 @@
                         <img src="assets/img/heart-blank.svg" alt="">
                     </div>
                 </div>
+
                 <div class="product-customization">
                     <div class="color-and-quality">
                         <div class="customization-heading">
                             <p>Metal Color:</p>
                             <div class="color-options">
                                 <div class="bg-yellow-gold color"></div>
-                                <div class="bg-rose-gold color active"></div>
+                                <div class="bg-rose-gold color"></div>
                                 <div class="bg-white-gold color"></div>
                             </div>
                         </div>
                         <div class="gold-quality">
-                            <div class="q14kt ">14kt</div>
-                            <div class="q18kt active">18kt</div>
+                            <div class="14kt ">14kt</div>
+                            <div class="18kt active">18kt</div>
                         </div>
                     </div>
                     <div class="select-diamond">
@@ -1340,21 +1566,78 @@
                         </div>
                     </div>
                 </div>
+
                 <div class="product-buttons">
-                    <div onclick="showEnquiryCart()" class="btn-left">
+                    <div class="btn-left">
                         <img src="assets/img/bell.svg" alt="bell">
                         <div class="text-uppercase btn-font">
                             Enquire
                         </div>
                     </div>
-                    <div onclick="showAddedToCart()" class="btn-right active">
+                    <div class="btn-right active">
                         <div class="text-uppercase btn-font">
                             ADD TO BAG
                         </div>
 
                     </div>
                 </div>
+
             </div>
+
+            <script>
+
+                var carouselTest;
+                var btnFullscreen;
+                var videoEle;
+
+                document.addEventListener('init', function (event) {
+
+                    carouselTest = document.getElementById('carousel-test');
+                    
+                    /* setInterval(function(){ 
+                        if(carouselTest.getActiveIndex() === carouselTest.itemCount-1)
+                            carouselTest.first();
+                        else
+                            carouselTest.next(); 
+                    }, 3000); */
+                    
+                    // for view in full screen
+                    function enterFullScreen(element) {
+                        if (element.requestFullscreen) {
+                            element.requestFullscreen();
+                        } else if (element.mozRequestFullScreen) {
+                            element.mozRequestFullScreen();     // Firefox
+                        } else if (element.webkitRequestFullscreen) {
+                            element.webkitRequestFullscreen();  // Safari
+                        } else if (element.msRequestFullscreen) {
+                            element.msRequestFullscreen();      // IE/Edge
+                        }
+                    };
+                    
+                    btnFullscreen = document.querySelector(".fullscreen-btn");
+
+                    btnFullscreen.addEventListener("click", function () {
+                        videoEle = document.querySelector('.video-main');
+                        videoEle.style.display = "block";
+                        enterFullScreen(videoEle);
+                    });
+
+                    document.addEventListener('fullscreenchange', (event) => {
+                        if (document.fullscreenElement) {
+                            console.log('Entered fullscreen:', document.fullscreenElement);
+                        } else {
+                            videoEle.style.display = "none";
+                            console.log('Exited fullscreen.');
+                        }
+                    });
+
+                });
+
+                function setActiveItem(index){
+                    carouselTest.setActiveIndex(index);
+                }
+
+            </script>
 
             <!-- summary details // product details -->
             <div class="product-details-all">
@@ -1498,140 +1781,24 @@
                 </div>
             </div>
 
-            <!-- added to cart modal -->
-            <ons-modal class="modal-added-to-cart" direction="up">
-                <div class="cart-visible-area">
-                    <div class="cart-rectangle">
-                        <div class="cart-image-top">
-                            <img src="assets/img/cart-modal-added-successfully.png" alt="">
-                        </div>
-                        <div class="cart-heading">
-                            <img src="assets/img/emoji-celebrating-to-right.svg" alt="celebration">
-                            <p>Congratulations!</p>
-                            <img src="assets/img/emoji-celebrating-to-left.svg" alt="celebration">
-                        </div>
-                        <div class="cart-content">
-                            <p>Your Product has been successfully added to the cart! You can add more products or
-                                enquire the order.</p>
-                        </div>
-                        <div class="cart-buttons">
-                            <div class="add-more-btn cart-btn">
-                                <div class="btn-font">Add More</div>
-                            </div>
-                            <div onclick="showCart()" class="view-cart-btn cart-btn btn-green">
-                                <div class="btn-font">View Cart</div>
-                            </div>
-                        </div>
-
-                        <!-- close btn -->
-                        <div class="close-modal-btn-2 for-added-to-cart-modal">
-                            <img src="assets/img/cross-close-modal.svg" alt="">
-                        </div>
-                    </div>
-                </div>
-            </ons-modal>
-
-            <!-- modal for enquiry -->
-            <ons-modal class="modal-added-to-cart modal-enquiry" direction="up">
-                <div class="cart-visible-area">
-                    <div class="cart-rectangle">
-                        <div class="cart-image-top">
-                            <img src="assets/img/enquiry-modal.png" alt="">
-                        </div>
-                        <div class="cart-heading">
-                            <p>Personal Specialist Notified</p>
-                        </div>
-                        <div class="cart-content">
-                            <p>Assistance has been notified. They will attend to your needs shortly to assist with your
-                                purchase.</p>
-                        </div>
-                        <div class="cart-buttons">
-                            <div onclick="showCart()" class="add-more-btn cart-btn">
-                                <div class="btn-font">Your Cart</div>
-                            </div>
-                            <div class="enquire-again-btn cart-btn btn-green">
-                                <img src="assets/img/bell-ring.svg" alt="bell">
-                                <div class="btn-font">
-                                    Enquire Again
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- close btn -->
-                        <div class="close-modal-btn-3 for-enquiry-modal">
-                            <img src="assets/img/cross-close-modal.svg" alt="">
-                        </div>
-                    </div>
-                </div>
-            </ons-modal>
-
-            <script>
-                // make active
-                // Get references to the elements
-                var audio = new Audio('assets/ringing-bell.mp3'); // Replace 'bell.mp3' with the path to your audio file
-
-                var goldQualityDiv = document.querySelector('.gold-quality');
-                var qualityElements = goldQualityDiv.querySelectorAll('.gold-quality div');
-
-                // Add click event listeners to the elements
-                qualityElements.forEach(element => {
-                    element.addEventListener('click', () => {
-                        // Remove the 'active' class from all quality elements
-                        qualityElements.forEach(qualityElement => {
-                            qualityElement.classList.remove('active');
-                        });
-
-                        // Add the 'active' class to the clicked element
-                        element.classList.add('active');
-                    });
-                });
-
-                function showAddedToCart() {
-                    var modalAddedToCart = document.querySelector('ons-modal.modal-added-to-cart');
-                    var closeModalButton = document.querySelector('.close-modal-btn-2.for-added-to-cart-modal');
-                    var addMoreBtn = document.querySelector('.modal-added-to-cart .add-more-btn');
-                    modalAddedToCart.show();
-                    addMoreBtn.addEventListener('click', () => {
-                        modalAddedToCart.hide();
-                    })
-                    closeModalButton.addEventListener('click', () => {
-                        modalAddedToCart.hide();
-                    })
-                }
-
-                function showEnquiryCart() {
-                    var modalEnquiry = document.querySelector('ons-modal.modal-added-to-cart.modal-enquiry');
-                    var closeModalButton = document.querySelector('.close-modal-btn-3.for-enquiry-modal');
-                    var enquireAgainBtn = document.querySelector('.enquire-again-btn');
-                    // Play the audio
-                    audio.play();
-                    modalEnquiry.show();
-
-                    enquireAgainBtn.addEventListener('click', () => {
-                        modalEnquiry.hide();
-                    })
-                    closeModalButton.addEventListener('click', () => {
-                        modalEnquiry.hide();
-                    })
-                }
-
-            </script>
         </ons-page>
     </template>
 
+
     <!-- cart modal -->
-    <ons-modal class="modal-cart" direction="up">
+    <ons-modal direction="up">
         <div class="cart-visible-area">
             <div class="cart-rectangle">
                 <div class="cart-heading">
-                    <img src="assets/img/emoji-celebrating-to-right.svg" alt="celebration">
+                    <!-- <img src="assets/img/emoji-celebrating-to-right.svg" alt="celebration"> -->
                     <p>Your Cart</p>
-                    <img src="assets/img/emoji-celebrating-to-left.svg" alt="celebration">
+                    <!-- <img src="assets/img/emoji-celebrating-to-left.svg" alt="celebration"> -->
                 </div>
                 <!-- cart-product-wrapper -->
                 <div class="cart-product-wrapper">
                     <div class="cart-product">
                         <div class="product-inside">
+
                             <div class="top-row product-description">
                                 <div class="product-img">
                                     <img src="assets/img/cart-product-resized.png" alt="">
@@ -1672,6 +1839,7 @@
                                     </div>
                                 </div>
                             </div>
+
                             <div class="middle-row product-features">
                                 <div class="bg-rose-gold-light feature-tag">
                                     <div class="metal-name">
@@ -1689,14 +1857,19 @@
                                     </div>
                                 </div>
                             </div>
+
                             <div class="bottom-row subtotal">
                                 <p class="cart-subtotal-subheading">Sub-Total:</p>
                                 <p class="cart-subtotal-value">₹106,846</p>
                             </div>
+
+
+
                         </div>
                     </div>
                     <div class="cart-product">
                         <div class="product-inside">
+
                             <div class="top-row product-description">
                                 <div class="product-img">
                                     <img src="assets/img/cart-product-resized.png" alt="">
@@ -1737,6 +1910,7 @@
                                     </div>
                                 </div>
                             </div>
+
                             <div class="middle-row product-features">
                                 <div class="bg-rose-gold-light feature-tag">
                                     <div class="metal-name">
@@ -1754,14 +1928,17 @@
                                     </div>
                                 </div>
                             </div>
+
                             <div class="bottom-row subtotal d-none">
                                 <p class="cart-subtotal-subheading">Sub-Total:</p>
                                 <p class="cart-subtotal-value">₹106,846</p>
                             </div>
+
                         </div>
                     </div>
                     <div class="cart-product">
                         <div class="product-inside">
+
                             <div class="top-row product-description">
                                 <div class="product-img">
                                     <img src="assets/img/cart-product-resized.png" alt="">
@@ -1802,6 +1979,7 @@
                                     </div>
                                 </div>
                             </div>
+
                             <div class="middle-row product-features">
                                 <div class="bg-rose-gold-light feature-tag">
                                     <div class="metal-name">
@@ -1819,14 +1997,17 @@
                                     </div>
                                 </div>
                             </div>
+
                             <div class="bottom-row subtotal d-none">
                                 <p class="cart-subtotal-subheading">Sub-Total:</p>
                                 <p class="cart-subtotal-value">₹106,846</p>
                             </div>
+
                         </div>
                     </div>
                     <div class="cart-product">
                         <div class="product-inside">
+
                             <div class="top-row product-description">
                                 <div class="product-img">
                                     <img src="assets/img/cart-product-resized.png" alt="">
@@ -1867,6 +2048,7 @@
                                     </div>
                                 </div>
                             </div>
+
                             <div class="middle-row product-features">
                                 <div class="bg-rose-gold-light feature-tag">
                                     <div class="metal-name">
@@ -1884,10 +2066,14 @@
                                     </div>
                                 </div>
                             </div>
+
                             <div class="bottom-row subtotal d-none">
                                 <p class="cart-subtotal-subheading">Sub-Total:</p>
                                 <p class="cart-subtotal-value">₹106,846</p>
                             </div>
+
+
+
                         </div>
                     </div>
                 </div>
@@ -1900,7 +2086,7 @@
                         <p class="total-heading">Total</p>
                         <p class="total-amount">₹5,34,535</p>
                     </div>
-                    <div class="cart-buttons">
+                    <div class="cart-buttons" style="background: transparent;">
                         <div class="cart-btn enquire-btn">
                             <img src="assets/img/bell-ring.svg" alt="bell">
                             <div class="btn-font">
@@ -1914,6 +2100,9 @@
                         </div>
                     </div>
                 </div>
+
+
+
                 <!-- close btn -->
                 <div class="close-modal-btn">
                     <img src="assets/img/cross-close-modal.svg" alt="">
@@ -1921,13 +2110,14 @@
             </div>
         </div>
     </ons-modal>
+
     <script>
         function showCart() {
-            var modalCart = document.querySelector('ons-modal.modal-cart');
+            var modal = document.querySelector('ons-modal');
             var closeModalButton = document.querySelector('.close-modal-btn');
-            modalCart.show();
+            modal.show();
             closeModalButton.addEventListener('click', () => {
-                modalCart.hide();
+                modal.hide();
             })
         }
     </script>

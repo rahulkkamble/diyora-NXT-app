@@ -520,7 +520,7 @@ ons-card .img-group .badges {
 
 .home-most-popular-card .content {
     text-align: left;
-    padding-left: .5rem;
+    /* padding-left: .5rem; */
     padding-top: .5rem;
 }
 
@@ -877,27 +877,26 @@ p.subheading {
 
 .filter-row .filter-badge.active,
 .filter-row .filter-badge:active,
-.filter-row .filter-badge:focus{
+.filter-row .filter-badge:focus {
     background: #033432;
     color: #FFF;
 }
 
-.filter-badge.quality-options{
+.filter-badge.quality-options {
     width: 175px;
     padding: 0;
     justify-content: center;
     gap: 0;
 }
 
-.filter-badge.quality-options div{
+.filter-badge.quality-options div {
     padding: 14px 16px;
     height: 47px;
     border-radius: 13.81px;
 }
 
 .filter-badge.quality-options div.active,
-.filter-badge.quality-options div:active
-.filter-badge.quality-options div:focus{
+.filter-badge.quality-options div:active .filter-badge.quality-options div:focus {
     background: #033432;
     color: #FFF;
 }
@@ -937,7 +936,7 @@ p.subheading {
     width: 229px;
 }
 
-.products-result .product-card-wrapper{
+.products-result .product-card-wrapper {
     padding: 0;
     width: 250px;
 }
@@ -979,6 +978,11 @@ p.subheading {
 /* ================= P R O D U C T  --  I M A G E S ==================== */
 /* ================= P R O D U C T  --  I M A G E S ==================== */
 /* ================= P R O D U C T  --  I M A G E S ==================== */
+#productPage .page--material__background,
+#productPage .page__background {
+    background-color: #f8f8f8 !important;
+}
+
 .product-showcase,
 .product-details-all {
     /* width: 1080px; */
@@ -1188,7 +1192,7 @@ p.subheading {
 
 .color-options .color.active,
 .color-options .color:active,
-.color-options .color:focus{
+.color-options .color:focus {
     border: 2.795px solid #FFF;
 }
 
@@ -1442,7 +1446,9 @@ p.subheading {
     padding-top: 2rem;
 }
 
-.cart-visible-area .cart-rectangle .close-modal-btn {
+.cart-visible-area .cart-rectangle .close-modal-btn,
+.cart-visible-area .cart-rectangle .close-modal-btn-2,
+.cart-visible-area .cart-rectangle .close-modal-btn-3 {
     position: absolute;
     margin: 2rem;
     top: 0;
@@ -1474,8 +1480,10 @@ p.subheading {
     display: inline-flex;
     height: 699px;
     overflow-y: auto;
+    overflow-x: hidden;
     flex-direction: column;
     align-items: flex-start;
+    padding-right: 1rem;
     gap: 28.836px;
     flex-shrink: 0;
 }
@@ -1745,11 +1753,111 @@ ons-back-button.remove-icon .back-button--material__label {
 }
 
 
+/* ============== Modal added to cart successfully ===========  */
+.modal-added-to-cart .cart-visible-area {
+    width: 378px;
+    height: 425px;
+    margin: auto;
 
+}
 
+.modal-added-to-cart .cart-visible-area .cart-rectangle {
+    width: 378px;
+    height: 425px;
+    border-radius: 12px;
+    background: #FFF;
+    padding-top: .8rem;
+}
 
+.modal-added-to-cart .cart-visible-area .cart-rectangle .cart-image-top {
+    width: 232px;
+    height: 225px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: .8rem;
+}
 
+.modal-added-to-cart .cart-visible-area .cart-rectangle .close-modal-btn {
+    margin: 1.5rem;
+}
 
+.modal-added-to-cart .cart-heading {
+    gap: .76rem;
+    margin-bottom: .25rem;
+}
+
+.modal-added-to-cart .cart-heading img {
+    width: 24px;
+}
+
+.modal-added-to-cart .cart-heading p {
+    font-size: 20px;
+}
+
+.modal-added-to-cart .cart-content p {
+    width: 334px;
+    color: #475467;
+    text-align: center;
+    font-family: Futura Bk BT;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    margin: auto;
+    /* 142.857% */
+}
+
+.modal-added-to-cart .cart-content{
+    margin-bottom: 1.2rem;
+}
+
+.modal-added-to-cart .cart-buttons {
+    display: flex;
+    width: 334px;
+    align-items: center;
+    gap: 8px;
+    margin: auto;
+}
+
+.modal-added-to-cart .cart-buttons .cart-btn {
+    display: flex;
+    width: 148px;
+    padding: 14.006px 13.182px;
+    justify-content: center;
+    align-items: center;
+    gap: 8.239px;
+    flex-shrink: 0;
+    border-radius: 9.887px;
+    border: 1.648px solid #D0D5DD;
+}
+
+.modal-added-to-cart .cart-buttons .cart-btn.btn-green {
+    width: 178px;
+    color: white;
+    background: #05A675;
+}
+
+.modal-added-to-cart.modal-enquiry .cart-buttons .cart-btn.btn-green img{
+    width: 20px;
+    color: white;
+    filter: invert(1) saturate(0) contrast(2);
+}
+
+.modal-added-to-cart .cart-buttons .cart-btn.btn-green .btn-font{
+    color: white;
+}
+
+.modal-added-to-cart .cart-buttons .cart-btn .btn-font {
+    color: #344054;
+    text-align: center;
+    font-family: Futura Bk BT;
+    font-size: 16.478px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
 
 
 
