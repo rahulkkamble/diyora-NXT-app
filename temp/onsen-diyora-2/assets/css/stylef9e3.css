@@ -201,7 +201,7 @@ ons-page {
     /* Adjust the iteration count if needed */
 }
 
-.slide-0{
+.slide-0 {
     animation: none;
 }
 
@@ -255,6 +255,35 @@ ons-page {
     background: none;
 }
 
+.ons-toolbar.navbar .header-icon {
+    position: relative;
+}
+
+.ons-toolbar.navbar .header-icon .notification-number {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 18px;
+    width: 18px;
+    border-radius: 50%;
+    background-color: #E5CF80;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.header-icon .notification-number .value{
+    /* Typo */
+    color: #000;
+    text-align: center;
+    font-family: Futura Std;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 650;
+    line-height: 16px;
+}
 
 .ons-toolbar.navbar .center .logo-imgs img {
     margin: auto 0;
@@ -891,7 +920,7 @@ p.subheading {
     gap: 8px;
 }
 
-.filter-row .filter-badge,.filter-row .quality-options {
+.filter-row .filter-badge, .filter-row .quality-options {
     color: #7D7D7D;
     display: flex;
     flex-shrink: 0;
@@ -928,7 +957,7 @@ p.subheading {
     transition: all .5s ease;
 }
 
-.quality-options .qall{
+.quality-options .qall {
     position: absolute;
     width: 49.75px;
     z-index: 10;
@@ -936,17 +965,17 @@ p.subheading {
 }
 
 .quality-options .q14kt,
-.quality-options .q18kt{
+.quality-options .q18kt {
     position: absolute;
     width: 62.91px;
     z-index: 10;
 }
 
-.quality-options .q14kt{
+.quality-options .q14kt {
     left: 50.75px;
 }
 
-.quality-options .q18kt{
+.quality-options .q18kt {
     left: calc(49.75px + 61.91px);
 }
 
@@ -962,19 +991,21 @@ p.subheading {
 
 .quality-options .qall.active~.animation-active,
 .quality-options .qall:focus~.animation-active,
-.quality-options .qall:active~.animation-active{
+.quality-options .qall:active~.animation-active {
     width: 49.75px;
     left: 0;
 }
+
 .quality-options .q14kt.active~.animation-active,
 .quality-options .q14kt:focus~.animation-active,
-.quality-options .q14kt:active~.animation-active{
+.quality-options .q14kt:active~.animation-active {
     width: 62.91px;
     left: 49.75px;
 }
+
 .quality-options .q18kt.active~.animation-active,
 .quality-options .q18kt:focus~.animation-active,
-.quality-options .q18kt:active~.animation-active{
+.quality-options .q18kt:active~.animation-active {
     width: 62.91px;
     left: calc(49.75px + 61.91px);
 }
@@ -1517,13 +1548,13 @@ p.subheading {
 }
 
 .product-buttons .btn-right.active:focus,
-.product-buttons .btn-right.active:active{
+.product-buttons .btn-right.active:active {
     background: #fff;
-    
+
 }
 
 .product-buttons .btn-right.active:focus .btn-font,
-.product-buttons .btn-right.active:active .btn-font{
+.product-buttons .btn-right.active:active .btn-font {
     color: #003937;
 }
 
