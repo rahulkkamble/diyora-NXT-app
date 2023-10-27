@@ -837,7 +837,7 @@ p.subheading {
     min-height: 1440px;
     padding: 1rem;
     flex-shrink: 0;
-    background: url(/assets/img/left-side-bg-resized.png), lightgray -3325130894250371000px -17932839726027465000px / 13701447202043003000% 2040204553460131300% no-repeat;
+    background: url(../img/left-side-bg-resized.png), lightgray -3325130894250371000px -17932839726027465000px / 13701447202043003000% 2040204553460131300% no-repeat;
 }
 
 .left-side-category-section .card-wrapper-vertical {
@@ -891,7 +891,7 @@ p.subheading {
     gap: 8px;
 }
 
-.filter-row .filter-badge {
+.filter-row .filter-badge,.filter-row .quality-options {
     color: #7D7D7D;
     display: flex;
     flex-shrink: 0;
@@ -901,7 +901,7 @@ p.subheading {
     gap: 5.273px;
     font-family: 'Futura Bk BT';
     font-weight: 400;
-
+    transition: all .3s ease;
     border-radius: 13.182px;
     border: 1.318px solid var(--border-color);
 }
@@ -913,14 +913,7 @@ p.subheading {
     color: #FFF;
 }
 
-.filter-badge.quality-options:focus,
-.filter-badge.quality-options:active,
-.filter-badge.quality-options.active{
-    background: transparent;
-    color: #7D7D7D;
-}
-
-.filter-badge.quality-options {
+.quality-options {
     position: relative;
     width: 175px;
     padding: 0;
@@ -928,36 +921,36 @@ p.subheading {
     gap: 0;
 }
 
-.filter-badge.quality-options div {
+.quality-options div {
     padding: 14px 16px;
     height: 47px;
     border-radius: 13.81px;
     transition: all .5s ease;
 }
 
-.filter-badge.quality-options .qall{
+.quality-options .qall{
     position: absolute;
     width: 49.75px;
     z-index: 10;
     left: 0;
 }
 
-.filter-badge.quality-options .q14kt,
-.filter-badge.quality-options .q18kt{
+.quality-options .q14kt,
+.quality-options .q18kt{
     position: absolute;
     width: 62.91px;
     z-index: 10;
 }
 
-.filter-badge.quality-options .q14kt{
+.quality-options .q14kt{
     left: 50.75px;
 }
 
-.filter-badge.quality-options .q18kt{
+.quality-options .q18kt{
     left: calc(49.75px + 61.91px);
 }
 
-.filter-badge.filter-badge.quality-options span.animation-active {
+.quality-options span.animation-active {
     position: absolute;
     height: 100%;
     top: 0;
@@ -967,27 +960,27 @@ p.subheading {
     transition: all .5s ease 0s;
 }
 
-.filter-badge.quality-options .qall.active~.animation-active,
-.filter-badge.quality-options .qall:focus~.animation-active,
-.filter-badge.quality-options .qall:active~.animation-active{
+.quality-options .qall.active~.animation-active,
+.quality-options .qall:focus~.animation-active,
+.quality-options .qall:active~.animation-active{
     width: 49.75px;
     left: 0;
 }
-.filter-badge.quality-options .q14kt.active~.animation-active,
-.filter-badge.quality-options .q14kt:focus~.animation-active,
-.filter-badge.quality-options .q14kt:active~.animation-active{
+.quality-options .q14kt.active~.animation-active,
+.quality-options .q14kt:focus~.animation-active,
+.quality-options .q14kt:active~.animation-active{
     width: 62.91px;
     left: 49.75px;
 }
-.filter-badge.quality-options .q18kt.active~.animation-active,
-.filter-badge.quality-options .q18kt:focus~.animation-active,
-.filter-badge.quality-options .q18kt:active~.animation-active{
+.quality-options .q18kt.active~.animation-active,
+.quality-options .q18kt:focus~.animation-active,
+.quality-options .q18kt:active~.animation-active{
     width: 62.91px;
     left: calc(49.75px + 61.91px);
 }
 
-.filter-badge.quality-options div.active,
-.filter-badge.quality-options div:active .filter-badge.quality-options div:focus {
+.quality-options div.active,
+.quality-options div:active .quality-options div:focus {
     /* background: #033432; */
     color: #FFF;
 }
@@ -1196,8 +1189,9 @@ p.subheading {
 }
 
 .product-showcase .sliding-varient-images span.dot:active,
+.product-showcase .sliding-varient-images span.dot.active,
 .product-showcase .sliding-varient-images span.dot:focus {
-    border: 2px solid #babababa;
+    border: 2px solid #bababa4f;
     border-radius: 17px;
 }
 
@@ -1520,6 +1514,17 @@ p.subheading {
 .product-buttons .btn-right.active div,
 .product-buttons .btn-left.active div {
     color: #fff;
+}
+
+.product-buttons .btn-right.active:focus,
+.product-buttons .btn-right.active:active{
+    background: #fff;
+    
+}
+
+.product-buttons .btn-right.active:focus .btn-font,
+.product-buttons .btn-right.active:active .btn-font{
+    color: #003937;
 }
 
 .btn-font {

@@ -480,7 +480,7 @@
 
                     function startCarouselAnimation() {
                         var carouselItem = document.querySelector('#carouselMostPopular ons-carousel-item');
-                        console.log(carouselItem, "animation started");
+                        // console.log(carouselItem, "animation started");
 
                         if (carouselItem) {
                             // Set the "className" property to "carousel-item slide"
@@ -537,6 +537,7 @@
                             randomCard.classList.remove('active');
                         }, 150);
                     }
+
 
                     // Call the function to add and remove "active" class randomly
                     setInterval(addActiveClassRandomly, 7000); // You can adjust the interval as needed
@@ -1116,7 +1117,7 @@
                             <div class="circle bg-white-gold"></div>
                             White Gold
                         </div>
-                        <div class="filter-badge quality-options">
+                        <div class="quality-options">
                             <div class="qall active">All</div>
                             <div class="q14kt">14kt</div>
                             <div class="q18kt">18kt</div>
@@ -1459,9 +1460,24 @@
                     // else if (page.id === 'category-earring') {
                     //     page.querySelector('div class="ons-toolbar navbar" .center').innerHTML = page.data.title;
                     // }
+
+
+                    // filter-badge active on click
+                    const filterBadges = document.querySelectorAll('.filter-badge');
+
+                    filterBadges.forEach(function (badge) {
+                        badge.addEventListener('click', function () {
+                            // Remove the "active" class from all filter badges
+                            filterBadges.forEach(function (item) {
+                                item.classList.remove('active');
+                            });
+                            // Add the "active" class to the clicked filter badge
+                            badge.classList.add('active');
+                        });
+                    });
+
                     var qualityDivCategory = document.querySelector('.quality-options');
                     var qualityElementsCategory = qualityDivCategory.querySelectorAll('.quality-options div');
-
                     // Add click event listeners to the elements
                     qualityElementsCategory.forEach(element => {
                         element.addEventListener('click', () => {
@@ -1710,10 +1726,11 @@
                             <div class="circle bg-white-gold"></div>
                             White Gold
                         </div>
-                        <div class="filter-badge quality-options">
-                            <div class="active">All</div>
-                            <div>14kt</div>
-                            <div>18kt</div>
+                        <div class="quality-options">
+                            <div class="qall active">All</div>
+                            <div class="q14kt">14kt</div>
+                            <div class="q18kt">18kt</div>
+                            <span class="animation-active"></span>
                         </div>
                     </div>
                     <!-- listed products -->
@@ -2051,6 +2068,45 @@
                     // else if (page.id === 'category-earring') {
                     //     page.querySelector('div class="ons-toolbar navbar" .center').innerHTML = page.data.title;
                     // }
+
+                    
+                    // filter-badge active on click
+                    const filterBadges = document.querySelectorAll('.filter-badge');
+
+                    filterBadges.forEach(function (badge) {
+                        badge.addEventListener('click', function () {
+                            // Remove the "active" class from all filter badges
+                            filterBadges.forEach(function (item) {
+                                item.classList.remove('active');
+                            });
+                            // Add the "active" class to the clicked filter badge
+                            badge.classList.add('active');
+                        });
+                    });
+
+                    var qualityDivCategory = document.querySelector('.quality-options');
+                    var qualityElementsCategory = qualityDivCategory.querySelectorAll('.quality-options div');
+                    var forWhoSectionCards = document.querySelectorAll('.for-who-section ons-card')
+                    // Add click event listeners to the elements
+                    qualityElementsCategory.forEach(element => {
+                        element.addEventListener('click', () => {
+                            // Remove the 'active' class from all quality elements
+                            qualityElementsCategory.forEach(qualityElementCat => {
+                                qualityElementCat.classList.remove('active');
+                            });
+
+                            // Add the 'active' class to the clicked element
+                            element.classList.add('active');
+                        });
+                    });
+                    forWhoSectionCards.forEach(element => {
+                        element.addEventListener('click', () => {
+                            forWhoSectionCards.forEach(forWhoSecCard => {
+                                forWhoSecCard.classList.remove('active');
+                            });
+                            element.classList.add('active');
+                        });
+                    });
                     setInterval(function () {
                         var carouselCats = document.getElementById('carousel-cats');
                         if (carouselCats.getActiveIndex() === carouselCats.itemCount - 1)
@@ -2113,20 +2169,10 @@
                                 <img src="assets/img/showcase-slide-image.png" alt="" style="width: 100%;">
                             </ons-carousel-item>
                             <ons-carousel-item class="carousel-item">
-                                <img src="assets/img/Ring-1.png" alt="" style="width: 100%;">
-                                <video class="video-main" autoplay loop muted style="width: 100%; display: none;"
-                                    src="assets/video/R_PTRG00451-PA1163%20(30CT).mp4" type="video/mp4">
-                                </video>
-                                <div class="fullscreen-btn">
-                                    <img src="assets/img/video-play-icon.png" alt="video-play-icon"
-                                        style="width: 100px;">
-                                </div>
+                                <img src="assets/img/showcase-slide-image.png" alt="" style="width: 100%;">
                             </ons-carousel-item>
                             <ons-carousel-item class="carousel-item">
                                 <img src="assets/img/cart-product.png" alt="" style="width: 100%;">
-                            </ons-carousel-item>
-                            <ons-carousel-item class="carousel-item">
-                                <img src="assets/img/showcase-slide-image.png" alt="" style="width: 100%;">
                             </ons-carousel-item>
                             <ons-carousel-item class="carousel-item">
                                 <img src="assets/img/Ring-1.png" alt="" style="width: 100%;">
@@ -2145,15 +2191,12 @@
                                 <img src="assets/img/showcase-slide-image.png" alt="" style="width: 100%;">
                             </ons-carousel-item>
                             <ons-carousel-item class="carousel-item">
-                                <img src="assets/img/Ring-1.png" alt="" style="width: 100%;">
-                                <video class="video-main" autoplay loop muted style="width: 100%; display: none;"
-                                    src="assets/video/R_PTRG00451-PA1163%20(30CT).mp4" type="video/mp4">
-                                </video>
-                                <div class="fullscreen-btn">
-                                    <img src="assets/img/video-play-icon.png" alt="video-play-icon"
-                                        style="width: 100px;">
-                                </div>
+                                <img src="assets/img/cart-product.png" alt="" style="width: 100%;">
                             </ons-carousel-item>
+                            <ons-carousel-item class="carousel-item">
+                                <img src="assets/img/showcase-slide-image.png" alt="" style="width: 100%;">
+                            </ons-carousel-item>
+
                         </ons-carousel>
                     </div>
 
@@ -2164,27 +2207,28 @@
                         <span id="dot1" class="dot" onclick="setActiveItem(1);">
                             <img src="assets/img/showcase-slide-image.png" alt="" style="width: 100%;">
                         </span>
-                        <span id="dot2" class="dot" onclick="setActiveItem(2);">
-                            <img src="assets/img/Ring-1.png" alt="" style="width: 100%;">
+                        <span id="dot4" class="dot" onclick="setActiveItem(2);">
+                            <img src="assets/img/showcase-slide-image.png" alt="" style="width: 100%;">
                         </span>
                         <span id="dot3" class="dot" onclick="setActiveItem(3);">
                             <img src="assets/img/cart-product.png" alt="" style="width: 100%;">
                         </span>
-                        <span id="dot4" class="dot" onclick="setActiveItem(4);">
-                            <img src="assets/img/showcase-slide-image.png" alt="" style="width: 100%;">
-                        </span>
-                        <span id="dot5" class="dot" onclick="setActiveItem(5);">
+                        <span id="dot2" class="dot" onclick="setActiveItem(4);">
                             <img src="assets/img/Ring-1.png" alt="" style="width: 100%;">
                         </span>
-                        <span id="dot3" class="dot" onclick="setActiveItem(6);">
+                        <span id="dot3" class="dot" onclick="setActiveItem(5);">
                             <img src="assets/img/cart-product.png" alt="" style="width: 100%;">
                         </span>
-                        <span id="dot4" class="dot" onclick="setActiveItem(7);">
+                        <span id="dot4" class="dot" onclick="setActiveItem(6);">
                             <img src="assets/img/showcase-slide-image.png" alt="" style="width: 100%;">
                         </span>
-                        <span id="dot6" class="dot" onclick="setActiveItem(8);">
-                            <img src="assets/img/Ring-1.png" alt="" style="width: 100%;">
+                        <span id="dot3" class="dot" onclick="setActiveItem(7);">
+                            <img src="assets/img/cart-product.png" alt="" style="width: 100%;">
                         </span>
+                        <span id="dot4" class="dot" onclick="setActiveItem(8);">
+                            <img src="assets/img/showcase-slide-image.png" alt="" style="width: 100%;">
+                        </span>
+
                     </div>
                     <div class="variation-carousel-buttons">
                         <div class="slide-prev-btn" onclick="prevScroll()">
@@ -2276,10 +2320,53 @@
                 var carouselTest;
                 var btnFullscreen;
                 var videoEle;
+                var reqUrl;
+                var kioskId;
 
                 document.addEventListener('init', function (event) {
 
                     carouselTest = document.getElementById('carousel-test');
+
+                    // select Diamond active on click
+                    const diamondOptions = document.querySelector('.select-diamond .customization-data').querySelectorAll('div');
+                    diamondOptions.forEach(function (option) {
+                        option.addEventListener('click', function () {
+                            // Remove the "active" class from all options
+                            diamondOptions.forEach(function (item) {
+                                item.classList.remove('active');
+                            });
+
+                            // Add the "active" class to the clicked option
+                            option.classList.add('active');
+                        });
+                    });
+
+                    // color options active on click
+                    const colorDivs = document.querySelectorAll('.color-options .color');
+                    colorDivs.forEach(function (div) {
+                        div.addEventListener('click', function () {
+                            // Remove "active" class from all color divs
+                            colorDivs.forEach(function (color) {
+                                color.classList.remove('active');
+                            });
+                            // Add "active" class to the clicked color div
+                            div.classList.add('active');
+                        });
+                    });
+
+                    // select Diamond active on click
+                    const selectSize = document.querySelector('.select-size .customization-data').querySelectorAll('div');
+                    selectSize.forEach(function (option) {
+                        option.addEventListener('click', function () {
+                            // Remove the "active" class from all options
+                            selectSize.forEach(function (item) {
+                                item.classList.remove('active');
+                            });
+
+                            // Add the "active" class to the clicked option
+                            option.classList.add('active');
+                        });
+                    });
 
                     /* setInterval(function(){ 
                         if(carouselTest.getActiveIndex() === carouselTest.itemCount-1)
@@ -2302,11 +2389,13 @@
                     };
 
                     btnFullscreen = document.querySelector(".fullscreen-btn");
+                    reqUrl = 'https://cdn.pixabay.com/vimeo/662525710/winter-103361.mp4?width=1280&hash=31cbab7161d5acac4854d54b362494edf76fd68c';
 
                     btnFullscreen.addEventListener("click", function () {
                         videoEle = document.querySelector('.video-main');
                         videoEle.style.display = "block";
                         enterFullScreen(videoEle);
+                        changeVideoUrl(reqUrl);
                     });
 
                     document.addEventListener('fullscreenchange', (event) => {
@@ -2318,6 +2407,32 @@
                         }
                     });
 
+                    // video request ajax
+                    function changeVideoUrl(newUrl) {
+                        kioskId = 1; // Set the kioskId here
+
+                        fetch(`https://t2esamples.online/api/kiosk/${kioskId}/change-url`, {
+                            method: 'PUT',
+                            headers: {
+                                'Content-Type': 'application/json',
+                                'Accept': 'application/json',
+                                '_method': 'put'
+                                // Add any additional headers if needed
+                            },
+                            body: JSON.stringify({ url: newUrl })
+                        })
+                            .then(response => {
+                                if (response.ok) {
+                                    // Update the UI here if the request was successful
+                                    console.log('Video URL changed successfully.');
+                                } else {
+                                    console.error('Failed to change video URL.');
+                                }
+                            })
+                            .catch(error => {
+                                console.error('An error occurred:', error);
+                            });
+                    }
                 });
 
                 function setActiveItem(index) {
@@ -2352,8 +2467,6 @@
                     var duration = 100; // Adjust the duration as needed (in milliseconds)
                     smoothScroll(slidingVarientImages, targetScrollLeft, duration);
                 }
-
-
             </script>
 
             <!-- summary details // product details -->
@@ -2498,12 +2611,12 @@
                 <div class="cart-visible-area">
                     <div class="cart-rectangle">
                         <div class="cart-image-top">
-                            <img src="/assets/img/cart-modal-added-successfully.png" alt="">
+                            <img src="assets/img/cart-modal-added-successfully.png" alt="">
                         </div>
                         <div class="cart-heading">
-                            <img src="/assets/img/emoji-celebrating-to-right.svg" alt="celebration">
+                            <img src="assets/img/emoji-celebrating-to-right.svg" alt="celebration">
                             <p>Congratulations!</p>
-                            <img src="/assets/img/emoji-celebrating-to-left.svg" alt="celebration">
+                            <img src="assets/img/emoji-celebrating-to-left.svg" alt="celebration">
                         </div>
                         <div class="cart-content">
                             <p>Your Product has been successfully added to the cart! You can add more products
@@ -2521,7 +2634,7 @@
 
                         <!-- close btn -->
                         <div class="close-modal-btn-2 for-added-to-cart-modal">
-                            <img src="/assets/img/cross-close-modal.svg" alt="">
+                            <img src="assets/img/cross-close-modal.svg" alt="">
                         </div>
                     </div>
                 </div>
@@ -2532,7 +2645,7 @@
                 <div class="cart-visible-area">
                     <div class="cart-rectangle">
                         <div class="cart-image-top">
-                            <img src="/assets/img/enquiry-modal.png" alt="">
+                            <img src="assets/img/enquiry-modal.png" alt="">
                         </div>
                         <div class="cart-heading">
                             <p>Personal Specialist Notified</p>
@@ -2547,7 +2660,7 @@
                                 <div class="btn-font">Your Cart</div>
                             </div>
                             <div class="enquire-again-btn cart-btn btn-green">
-                                <img src="/assets/img/bell-ring.svg" alt="bell">
+                                <img src="assets/img/bell-ring.svg" alt="bell">
                                 <div class="btn-font">
                                     Enquire Again
                                 </div>
@@ -2556,7 +2669,7 @@
 
                         <!-- close btn -->
                         <div class="close-modal-btn-3 for-enquiry-modal">
-                            <img src="/assets/img/cross-close-modal.svg" alt="">
+                            <img src="assets/img/cross-close-modal.svg" alt="">
                         </div>
                     </div>
                 </div>
@@ -2564,7 +2677,7 @@
             <script>
                 // make active
                 // Get references to the elements
-                var audio = new Audio('/assets/ringing-bell.mp3'); // Replace 'bell.mp3' with the path to your audio file
+                var audio = new Audio('assets/ringing-bell.mp3'); // Replace 'bell.mp3' with the path to your audio file
 
                 var goldQualityDiv = document.querySelector('.gold-quality');
                 var qualityElements = goldQualityDiv.querySelectorAll('.gold-quality div');
@@ -2944,8 +3057,5 @@
     </script>
 
 </body>
-
-
-<!-- Mirrored from metaverse.tech2edge.co/diyora-kiosk-sim/ by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 19 Oct 2023 12:25:58 GMT -->
 
 </html>
